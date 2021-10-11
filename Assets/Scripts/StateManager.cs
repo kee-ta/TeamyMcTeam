@@ -12,7 +12,7 @@ public class StateManager : MonoBehaviour
     }
 
     private void RunStateMachine(){
-        State nextState = currentState?.RunCurrent;
+        State nextState = currentState?.RunCurrent();
 
         if(nextState != null){
             SwitchToNext(nextState);
