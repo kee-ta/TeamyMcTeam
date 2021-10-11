@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<DayOne>
+	<npc id="1">Alice
+    
+		<speech>
+			<dialogue state="timesTalked" value="0">
+				<line>Hello there!</line>
+				<line>You are talking to me the first time!</line>
+			</dialogue>
+			<dialogue state="timesTalked" value="1">
+				<line>Hmmm...I remember you! Have we met before?</line>
+			</dialogue>
+			<dialogue state="eventWar" value="True">
+				<line>My neighbour was in a big rush today.</line>
+			</dialogue>
+		</speech>
+	</npc>
+	<npc id="2">Bob
+    
+		<speech>
+			<dialogue state="timesTalked" value="0">
+				<line>Hey</line>
+				<line>Too many rats in this town</line>
+			</dialogue>
+			<dialogue state="timesTalked" value="1">
+				<line>...</line>
+			</dialogue>
+			<dialogue state="eventWar" value="Apple">
+				<line>Sun's always brighter somewhere else.</line>
+			</dialogue>
+		</speech>
+	</npc>
+</DayOne>
