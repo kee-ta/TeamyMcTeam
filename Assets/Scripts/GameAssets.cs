@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameAssets : MonoBehaviour
 {
     private static GameAssets _i;
+    public float volume, pitch;
 
     public static GameAssets Instance
     {
@@ -13,6 +14,8 @@ public class GameAssets : MonoBehaviour
                 return _i;
         }
     }
+
+    public AudioClip oneOff;
 
     public SoundAudioClip[] SoundAudioClipArray;
 

@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         }
         isIdle = moveX == 0 && movey == 0;
         if(!isIdle){
-            SoundManager.PlayClip(SoundManager.Sound.PlayerMoveCobble);
+            SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
         }
     }
 }
