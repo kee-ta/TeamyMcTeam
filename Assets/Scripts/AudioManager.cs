@@ -84,7 +84,7 @@ public class AudioManager : MonoBehaviour {
 
 		StartCoroutine(AnimateMusicCrossfade(fadeDuration));
 	}
-
+/*
 	public void PlaySound(AudioClip clip, Vector3 pos) {
 		if (clip != null) {
 			AudioSource.PlayClipAtPoint (clip, pos, sfxVolumePercent * masterVolumePercent);
@@ -94,7 +94,7 @@ public class AudioManager : MonoBehaviour {
 	public void PlaySound(string soundName, Vector3 pos) {
 		PlaySound (library.GetClipFromName (soundName), pos);
 	}
-
+*/
 	public void PlaySound2D(string soundName) {
 		sfx2DSource.PlayOneShot (library.GetClipFromName (soundName), sfxVolumePercent * masterVolumePercent);
 	}
