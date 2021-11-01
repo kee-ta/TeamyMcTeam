@@ -5,12 +5,12 @@ using UnityEngine;
 public class Npc : MonoBehaviour
 {
     Vector2 startPos;
-    int id;
-    string npcName;
+    //int id;
+    //string npcName;
     Dialogue[] dialogues;
     public Npc(){
-        id = -1;
-        npcName = "Debug NPCno";
+     //   id = -1;
+     //   npcName = "Debug NPCno";
     }
     
 

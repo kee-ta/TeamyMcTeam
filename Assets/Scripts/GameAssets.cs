@@ -24,4 +24,6 @@ public class GameAssets : MonoBehaviour
         public SoundManager.Sound sound;
         public AudioClip audioClip;
     }
+
+    public Sprite s_HealthPotion;
 }
