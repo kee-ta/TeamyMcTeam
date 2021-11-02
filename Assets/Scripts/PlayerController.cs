@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rgbd;
     private bool isIdle = true;
 
+    
+    
     Vector2 playerMove;
     // Start is called before the first frame update
     void Awake()
@@ -26,6 +28,7 @@ public class PlayerController : MonoBehaviour
         MovePlayer();
     }
 
+   
     private void UpdateMovement(){
         playerMove.x = Input.GetAxisRaw("Horizontal");
         playerMove.y = Input.GetAxisRaw("Vertical");
