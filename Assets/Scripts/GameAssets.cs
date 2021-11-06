@@ -15,6 +15,11 @@ public class GameAssets : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        Debug.Log("Assests Loaded");
+    }
+
     public AudioClip oneOff;
 
     public SoundAudioClip[] SoundAudioClipArray;
@@ -26,4 +31,7 @@ public class GameAssets : MonoBehaviour
     }
 
     public Sprite s_HealthPotion;
+    public Sprite s_Stone;
+    public Sprite s_Stick;
+    public Sprite s_Flower;
 }

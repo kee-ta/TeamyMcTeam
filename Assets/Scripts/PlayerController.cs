@@ -1,21 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IShopCustomer
 {
-
+    public static PlayerController Instance { get; private set; }
+    public event EventHandler OnGoldAmountChanged;
     public float moveSpeed = 4f;
     private Rigidbody2D rgbd;
     private bool isIdle = true;
 
-    
+    private int goldAmount;
     
     Vector2 playerMove;
     // Start is called before the first frame update
     void Awake()
     {
         rgbd = gameObject.GetComponent<Rigidbody2D>();
+        goldAmount = 500;
     }
 
     // Update is called once per frame
@@ -29,6 +32,15 @@ public class PlayerController : MonoBehaviour
     }
 
    
+    public void AddGoldAmount(int addGoldAmount) {
+    goldAmount += addGoldAmount;
+    OnGoldAmountChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    public int GetGoldAmount() {
+        return goldAmount;
+    }
+
     private void UpdateMovement(){
         playerMove.x = Input.GetAxisRaw("Horizontal");
         playerMove.y = Input.GetAxisRaw("Vertical");
@@ -54,4 +66,19 @@ public class PlayerController : MonoBehaviour
             SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
         }
     }
+
+    public void BoughtItem(Item.ItemType itemType){
+        Debug.Log("Bought Item!" + goldAmount.ToString());
+    }
+
+    public bool TrySpendGoldAmount(int spendGoldAmount) {
+        if (GetGoldAmount() >= spendGoldAmount) {
+            goldAmount -= spendGoldAmount;
+            OnGoldAmountChanged?.Invoke(this, EventArgs.Empty);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
