@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     void Awake()
     {
         rgbd = gameObject.GetComponent<Rigidbody2D>();
+        Instance = this;
         goldAmount = 500;
     }
 

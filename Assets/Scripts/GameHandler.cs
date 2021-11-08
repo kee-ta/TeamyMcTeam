@@ -8,7 +8,7 @@ public class GameHandler : MonoBehaviour
     private bool showingUI = false;
     public TextMeshProUGUI moneyCount;
     public GameObject playerInventoryUI;
-    public int playerMoney = 10;
+    public int playerMoney = 500;
     public void addMoney(int moneyToAdd){
         playerMoney += moneyToAdd;
     }
@@ -42,10 +42,6 @@ public class GameHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
-            addMoney(5);
-            updateMoney();
-        }
         if(Input.GetKeyDown("e")){
             ShowInventory();
         }
