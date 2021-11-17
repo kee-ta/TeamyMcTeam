@@ -8,12 +8,15 @@ public class GameHandler : MonoBehaviour
     private bool showingUI = false;
     public TextMeshProUGUI moneyCount;
     public GameObject playerInventoryUI;
-    public int playerMoney = 500;
+    public int playerMoney = 10;
+
     public void addMoney(int moneyToAdd){
         playerMoney += moneyToAdd;
     }
     private void Awake(){
         SoundManager.Initialize();
+        playerMoney =  PlayerController.instance.GetGoldAmount();   
+ 
     }
 
     public void updateMoney(){

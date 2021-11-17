@@ -5,21 +5,45 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IShopCustomer
 {
-    public static PlayerController Instance { get; private set; }
+    private static PlayerController _instance;
+    public static PlayerController instance {get  
+         {
+             if (_instance == null)
+             {
+                 _instance = (PlayerController) GameObject.FindObjectOfType(typeof(PlayerController));
+ 
+                 if (_instance == null)
+                 {
+                     GameObject go = new GameObject("PlayerController");
+                     _instance = go.AddComponent<PlayerController>();
+                 }
+             }
+             return _instance;
+         }
+         set
+         {
+             _instance = value;
+         }
+    }
     public event EventHandler OnGoldAmountChanged;
     public float moveSpeed = 4f;
     private Rigidbody2D rgbd;
     private bool isIdle = true;
 
-    private int goldAmount;
+    private int goldAmount= 500;
     
     Vector2 playerMove;
     // Start is called before the first frame update
     void Awake()
     {
+        if (_instance != null && _instance != this)
+        {
+            Destroy(this.gameObject);
+        } else {
+            _instance = this;
+        }
         rgbd = gameObject.GetComponent<Rigidbody2D>();
-        Instance = this;
-        goldAmount = 500;
+        //goldAmount = 500;
     }
 
     // Update is called once per frame
@@ -32,7 +56,6 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         MovePlayer();
     }
 
-   
     public void AddGoldAmount(int addGoldAmount) {
     goldAmount += addGoldAmount;
     OnGoldAmountChanged?.Invoke(this, EventArgs.Empty);
