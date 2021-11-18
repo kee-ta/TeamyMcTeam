@@ -17,10 +17,10 @@ public class UI_Shop : MonoBehaviour
     }
 
     private void Start() {
-        CreateItemButton(Item.ItemType.HealthPotion, Item.GetSprite(Item.ItemType.HealthPotion), "Flower", Item.GetCost(Item.ItemType.HealthPotion), 0);
+        CreateItemButton(Item.ItemType.Leaf, Item.GetSprite(Item.ItemType.Leaf), "Leaf", Item.GetCost(Item.ItemType.Leaf), 0);
         CreateItemButton(Item.ItemType.Stone, Item.GetSprite(Item.ItemType.Stone), "Stone", Item.GetCost(Item.ItemType.Stone), 1);
         CreateItemButton(Item.ItemType.Stick, Item.GetSprite(Item.ItemType.Stick), "Stick", Item.GetCost(Item.ItemType.Stick), 2);
-        CreateItemButton(Item.ItemType.Flower, Item.GetSprite(Item.ItemType.Flower), "Leaf", Item.GetCost(Item.ItemType.Flower), 3);
+        CreateItemButton(Item.ItemType.Flower, Item.GetSprite(Item.ItemType.Flower), "Flower", Item.GetCost(Item.ItemType.Flower), 3);
         Hide();
     }
 
@@ -29,7 +29,7 @@ public class UI_Shop : MonoBehaviour
         shopItemTransform.gameObject.SetActive(true);
         RectTransform shopItemRectTransform = shopItemTransform.GetComponent<RectTransform>();
 
-        float shopItemHeight = 50f;
+        float shopItemHeight = 250f;
         shopItemRectTransform.anchoredPosition = new Vector2(0, -shopItemHeight * positionIndex);
 
         shopItemTransform.Find("nameText").GetComponent<TextMeshProUGUI>().SetText(itemName);

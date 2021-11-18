@@ -9,7 +9,7 @@ public class GameHandler : MonoBehaviour
     public TextMeshProUGUI moneyCount;
     public GameObject playerInventoryUI;
     public int playerMoney = 10;
-
+    //public TextMeshProUGUI woodQtn;
     public void addMoney(int moneyToAdd){
         playerMoney += moneyToAdd;
     }
@@ -20,12 +20,14 @@ public class GameHandler : MonoBehaviour
     }
 
     public void updateMoney(){
+        playerMoney =  PlayerController.instance.GetGoldAmount(); 
         moneyCount.text = playerMoney.ToString();
     }
 
     public void ShowInventory(){
         if(!showingUI){
         playerInventoryUI.SetActive(true);
+        //woodQtn.text = PlayerController.instance.GetItemAmount(Item.ItemType.Stick).ToString();
         Debug.Log("Showing Inventory");
         showingUI = true;
         }
@@ -48,5 +50,6 @@ public class GameHandler : MonoBehaviour
         if(Input.GetKeyDown("e")){
             ShowInventory();
         }
+        updateMoney();
     }
 }
