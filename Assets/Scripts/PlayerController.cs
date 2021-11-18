@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     private bool isIdle = true;
 
     private int goldAmount= 500;
+    private int stickAmount, leafAmount, stoneAmount, flowerAmount;
     
     Vector2 playerMove;
     // Start is called before the first frame update
@@ -43,7 +44,6 @@ public class PlayerController : MonoBehaviour, IShopCustomer
             _instance = this;
         }
         rgbd = gameObject.GetComponent<Rigidbody2D>();
-        //goldAmount = 500;
     }
 
     // Update is called once per frame
@@ -54,6 +54,16 @@ public class PlayerController : MonoBehaviour, IShopCustomer
      void FixedUpdate()
     {
         MovePlayer();
+    }
+
+    public int GetItemAmount(Item.ItemType itemType){
+        switch (itemType) {
+        default:
+        case Item.ItemType.Leaf:     return leafAmount;
+        case Item.ItemType.Flower:    return flowerAmount;
+        case Item.ItemType.Stick:     return stickAmount;
+        case Item.ItemType.Stone:     return stoneAmount;
+        }
     }
 
     public void AddGoldAmount(int addGoldAmount) {
@@ -92,7 +102,26 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     }
 
     public void BoughtItem(Item.ItemType itemType){
-        Debug.Log("Bought Item!" + goldAmount.ToString());
+        Debug.Log("Bought " + itemType.ToString() + " " + goldAmount.ToString());
+        switch (itemType) {
+        default:
+        case Item.ItemType.Leaf:      
+        leafAmount++; 
+        Debug.Log( leafAmount.ToString() + "Leaves in inventory");
+        return;
+        case Item.ItemType.Flower: 
+        flowerAmount++; 
+        Debug.Log( flowerAmount.ToString() + "Flowers in inventory");  
+        return;
+        case Item.ItemType.Stick:   
+        stickAmount++;  
+        Debug.Log( stickAmount.ToString() + "Sticks in inventory");
+        return ;
+        case Item.ItemType.Stone:   
+        stoneAmount++; 
+        Debug.Log( stoneAmount.ToString() + "Stones in inventory"); 
+        return ;
+        }
     }
 
     public bool TrySpendGoldAmount(int spendGoldAmount) {
