@@ -7,9 +7,18 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
+    public void Update()
+    {
+        if (Input.GetKey(KeyCode.Q))
+        {
+            TriggerDialogue();
+        }
+    }
+
     public void TriggerDialogue() //Feed variable to Dialogue Manager
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+
     }
 
 }

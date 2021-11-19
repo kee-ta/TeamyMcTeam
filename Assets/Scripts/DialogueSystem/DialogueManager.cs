@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("Is Open", true);
+        animator.SetBool("IsOpen", true);
         
         nameText.text = dialogue.name;
 
@@ -44,8 +44,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue(); // Sentences left to say
-        StopAllCoroutines(); // Make sure TypeSentence is stopped 
-        StartCoroutine(TypeSentence(sentence));
+        // StopAllCoroutines(); // Make sure TypeSentence is stopped 
+        // StartCoroutine(TypeSentence(sentence));
     }
     
     IEnumerator TypeSentence(string sentence) // Automatically type sentences 
@@ -63,7 +63,8 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        animator.SetBool("Is Open", false);
+        animator.SetBool("IsOpen", false);
     }
+
 
 }
