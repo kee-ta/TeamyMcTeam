@@ -20,7 +20,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        animator.SetBool("Is Open", true);
+        animator.SetBool("IsOpen", true);
         
         nameText.text = dialogue.name;
 
@@ -33,6 +33,11 @@ public class DialogueManager : MonoBehaviour
 
         DisplayNextSentence();
 
+    }
+
+    public void OnMouseDown()
+    {
+        DisplayNextSentence();
     }
 
     public void DisplayNextSentence() // End conversation if no more sentences left to say
@@ -63,7 +68,8 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
-        animator.SetBool("Is Open", false);
+        animator.SetBool("IsOpen", false);
     }
+
 
 }
