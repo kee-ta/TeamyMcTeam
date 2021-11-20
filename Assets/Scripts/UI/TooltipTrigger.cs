@@ -15,4 +15,10 @@ public class TooltipTrigger : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         TooltipSystem.Hide();
     }
 
+    private void OnMouseEnter(){
+        TooltipSystem.Show(content,header);
+    }
+    private void OnMouseExit(){
+        TooltipSystem.Hide();
+    }
 }

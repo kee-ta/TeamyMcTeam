@@ -8,6 +8,7 @@ public class GameHandler : MonoBehaviour
     private bool showingUI = false;
     public TextMeshProUGUI moneyCount;
     public GameObject playerInventoryUI;
+    public GameObject dialogueBox;
     public int playerMoney = 10;
     //public TextMeshProUGUI woodQtn;
     public void addMoney(int moneyToAdd){
@@ -22,6 +23,17 @@ public class GameHandler : MonoBehaviour
     public void updateMoney(){
         playerMoney =  PlayerController.instance.GetGoldAmount(); 
         moneyCount.text = playerMoney.ToString();
+    }
+
+    public void showDialogue(){
+        if(!showingUI){
+            dialogueBox.SetActive(true);
+            showingUI = true;
+        }
+        else{
+            dialogueBox.SetActive(false);
+            showingUI= false;
+        }
     }
 
     public void ShowInventory(){
@@ -42,6 +54,7 @@ public class GameHandler : MonoBehaviour
         Debug.Log("GameHandler Started");
         updateMoney();
         playerInventoryUI.SetActive(false);
+        dialogueBox.SetActive(false);
     }
 
     // Update is called once per frame
@@ -50,6 +63,8 @@ public class GameHandler : MonoBehaviour
         if(Input.GetKeyDown("e")){
             ShowInventory();
         }
+        if(Input.GetKeyDown("g"))
+        showDialogue();
         updateMoney();
     }
 }

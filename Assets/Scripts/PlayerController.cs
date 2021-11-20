@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     private void UpdateMovement(){
         playerMove.x = Input.GetAxisRaw("Horizontal");
         playerMove.y = Input.GetAxisRaw("Vertical");
+        playerMove = playerMove.normalized;
     }
 
     private void MovePlayer(){
