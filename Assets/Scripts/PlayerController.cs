@@ -97,9 +97,9 @@ public class PlayerController : MonoBehaviour, IShopCustomer
             moveX = 1;
         }
         isIdle = moveX == 0 && movey == 0;
-        if(!isIdle){
-            SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
-        }
+        // if(!isIdle){
+        //     SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
+        // }
     }
 
     public void BoughtItem(Item.ItemType itemType){
