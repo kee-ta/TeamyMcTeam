@@ -31,6 +31,7 @@ public static class SoundManager
         GameObject soundObject = new GameObject("Sound");
         AudioSource audioSource = soundObject.AddComponent<AudioSource>();
         audioSource.clip = GetAudioClip(sound);
+        audioSource.volume = 0.2f;
         audioSource.Play();
         Object.Destroy(soundObject, audioSource.clip.length);
         }
