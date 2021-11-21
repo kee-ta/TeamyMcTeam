@@ -4,35 +4,49 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UI_Shop : MonoBehaviour
+public class UI_Shop_3 : MonoBehaviour
 {
     private Transform container;
     private Transform shopItemTemplate;
     private IShopCustomer shopCustomer;
     public bool sellLeaf= true, sellStone= true, sellFlower= true, sellStick = true;
     private int sellPositionIndex = 0;
+    
+    public Vector2Int LeafPrice;
+    public Vector2Int FlowerPrice;
+    public Vector2Int StonePrice;
+    public Vector2Int StickPrice;
 
+    public Sprite leafSprite;
+    public Sprite flowerSprite;
+    public Sprite stoneSprite;
+    public Sprite stickSprite;
     private void Awake() {
         container = transform.Find("container");
         shopItemTemplate = container.Find("shopItemTemplate");
         shopItemTemplate.gameObject.SetActive(false);
     }
 
+    private int GetRandomPrice(Vector2Int priceRange){
+        int price= Random.Range(priceRange.x, priceRange.y);
+        return price;
+    }
+
     private void Start() {
         if(sellLeaf){
-        CreateItemButton(Item.ItemType.Leaf, Item.GetSprite(Item.ItemType.Leaf), "Leaf", Item.GetCost(Item.ItemType.Leaf), 0);
+        CreateItemButton(Item.ItemType.Leaf, leafSprite, "Leaf", GetRandomPrice(LeafPrice), 0);
         sellPositionIndex++;
         }
         if(sellStone){
-        CreateItemButton(Item.ItemType.Stone, Item.GetSprite(Item.ItemType.Stone), "Stone", Item.GetCost(Item.ItemType.Stone), sellPositionIndex);
+        CreateItemButton(Item.ItemType.Stone, stoneSprite, "Stone", GetRandomPrice(StonePrice), sellPositionIndex);
         sellPositionIndex++;
         }
         if(sellStick){
-        CreateItemButton(Item.ItemType.Stick, Item.GetSprite(Item.ItemType.Stick), "Stick", Item.GetCost(Item.ItemType.Stick), sellPositionIndex);
+        CreateItemButton(Item.ItemType.Stick, stickSprite, "Stick", GetRandomPrice(StickPrice), sellPositionIndex);
         sellPositionIndex++;
         }
         if(sellFlower){
-        CreateItemButton(Item.ItemType.Flower, Item.GetSprite(Item.ItemType.Flower), "Flower", Item.GetCost(Item.ItemType.Flower), sellPositionIndex);
+        CreateItemButton(Item.ItemType.Flower, flowerSprite, "Flower", GetRandomPrice(FlowerPrice), sellPositionIndex);
         sellPositionIndex++;
         }
         Hide();
