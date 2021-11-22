@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IShopCustomer
 {
+    public GameObject interactPrompt;
     private static PlayerController _instance;
     public static PlayerController instance {get  
          {
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         } else {
             _instance = this;
         }
+        interactPrompt.SetActive(false);
         rgbd = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -133,6 +135,14 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         } else {
             return false;
         }
+    }
+
+    public void PromptActivate(){
+        interactPrompt.SetActive(true);
+    }
+
+    public void PromptDeactivate(){
+        interactPrompt.SetActive(false);
     }
 
 }

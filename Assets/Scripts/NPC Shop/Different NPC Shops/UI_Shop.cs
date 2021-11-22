@@ -75,7 +75,7 @@ public class UI_Shop : MonoBehaviour
             //Tooltip_Warning.ShowTooltip_Static("Cannot afford " + Item.GetCost(itemType) + "!");
         }
     }
-
+    
     public void Show(IShopCustomer shopCustomer) {
         this.shopCustomer = shopCustomer;
         gameObject.SetActive(true);
