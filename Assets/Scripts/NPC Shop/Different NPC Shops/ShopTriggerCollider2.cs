@@ -21,6 +21,7 @@ public class ShopTriggerCollider2 : MonoBehaviour {
     private void Update(){
         if(Input.GetKeyDown(KeyCode.C) && canShow){
             uiShop.Show(shopCustomer1);
+            PlayerController.instance.PromptDeactivate();
         }
     }
 
