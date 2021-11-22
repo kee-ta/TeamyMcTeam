@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameAssets : MonoBehaviour
 {
@@ -30,8 +31,8 @@ public class GameAssets : MonoBehaviour
         public AudioClip audioClip;
     }
 
-    public Sprite s_HealthPotion;
-    public Sprite s_Stone;
-    public Sprite s_Stick;
-    public Sprite s_Flower;
+    public Image s_HealthPotion;
+    public Image s_Stone;
+    public Image s_Stick;
+    public Image s_Flower;
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IShopCustomer
 {
+    public GameObject interactPrompt;
     private static PlayerController _instance;
     public static PlayerController instance {get  
          {
@@ -43,6 +44,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         } else {
             _instance = this;
         }
+        interactPrompt.SetActive(false);
         rgbd = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -78,6 +80,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     private void UpdateMovement(){
         playerMove.x = Input.GetAxisRaw("Horizontal");
         playerMove.y = Input.GetAxisRaw("Vertical");
+        playerMove = playerMove.normalized;
     }
 
     private void MovePlayer(){
@@ -96,9 +99,9 @@ public class PlayerController : MonoBehaviour, IShopCustomer
             moveX = 1;
         }
         isIdle = moveX == 0 && movey == 0;
-        if(!isIdle){
-            SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
-        }
+         if(!isIdle){
+             SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
+         }
     }
 
     public void BoughtItem(Item.ItemType itemType){
@@ -132,6 +135,14 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         } else {
             return false;
         }
+    }
+
+    public void PromptActivate(){
+        interactPrompt.SetActive(true);
+    }
+
+    public void PromptDeactivate(){
+        interactPrompt.SetActive(false);
     }
 
 }
