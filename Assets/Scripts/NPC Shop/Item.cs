@@ -22,14 +22,5 @@ public class Item : MonoBehaviour
         }
     }
 
-    public static Image GetSprite(ItemType itemType) {
-        switch (itemType) {
-        default: 
-        case ItemType.Leaf: return GameAssets.Instance.s_HealthPotion;
-        case ItemType.Flower: return GameAssets.Instance.s_Flower;
-        case ItemType.Stone: return GameAssets.Instance.s_Stone;
-        case ItemType.Stick: return GameAssets.Instance.s_Stick;
 
-        }
-    }
 }

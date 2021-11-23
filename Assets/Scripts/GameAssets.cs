@@ -30,9 +30,4 @@ public class GameAssets : MonoBehaviour
         public SoundManager.Sound sound;
         public AudioClip audioClip;
     }
-
-    public Image s_HealthPotion;
-    public Image s_Stone;
-    public Image s_Stick;
-    public Image s_Flower;
 }

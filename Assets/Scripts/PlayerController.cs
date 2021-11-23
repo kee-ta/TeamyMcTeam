@@ -131,6 +131,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         if (GetGoldAmount() >= spendGoldAmount) {
             goldAmount -= spendGoldAmount;
             OnGoldAmountChanged?.Invoke(this, EventArgs.Empty);
+            AudioManager.instance.PlaySound2D("BreadSpent");
             return true;
         } else {
             return false;

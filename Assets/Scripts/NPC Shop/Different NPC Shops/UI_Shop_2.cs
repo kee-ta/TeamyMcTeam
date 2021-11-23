@@ -17,6 +17,8 @@ public class UI_Shop_2 : MonoBehaviour
     public Vector2Int StonePrice;
     public Vector2Int StickPrice;
 
+    private int itemPrice;
+
     public Sprite leafSprite;
     public Sprite flowerSprite;
     public Sprite stoneSprite;
@@ -29,6 +31,7 @@ public class UI_Shop_2 : MonoBehaviour
 
     private int GetRandomPrice(Vector2Int priceRange){
         int price= Random.Range(priceRange.x, priceRange.y);
+        itemPrice = price;
         return price;
     }
 
@@ -68,7 +71,7 @@ public class UI_Shop_2 : MonoBehaviour
     }
 
     private void TryBuyItem(Item.ItemType itemType){
-        if (shopCustomer.TrySpendGoldAmount(Item.GetCost(itemType))) {
+        if (shopCustomer.TrySpendGoldAmount(itemPrice)){
             // Can afford cost
             shopCustomer.BoughtItem(itemType);
         } else {

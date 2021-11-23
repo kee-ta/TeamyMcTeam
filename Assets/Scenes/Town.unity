@@ -2154,7 +2154,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3174554675261841550, guid: 57f1f160ac4e312468730c21ad42255c, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3174554675261841550, guid: 57f1f160ac4e312468730c21ad42255c, type: 3}
       propertyPath: m_LocalScale.x
@@ -2215,11 +2215,11 @@ PrefabInstance:
     - target: {fileID: 3174554675261841553, guid: 57f1f160ac4e312468730c21ad42255c, type: 3}
       propertyPath: m_Follow
       value: 
-      objectReference: {fileID: 1862003842}
+      objectReference: {fileID: 0}
     - target: {fileID: 3174554675261841553, guid: 57f1f160ac4e312468730c21ad42255c, type: 3}
       propertyPath: m_LookAt
       value: 
-      objectReference: {fileID: 1862003842}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57f1f160ac4e312468730c21ad42255c, type: 3}
 --- !u!1 &715954227
@@ -3590,6 +3590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameAssets
       objectReference: {fileID: 0}
+    - target: {fileID: 7163931448437773061, guid: 372ba341f21ca6b4aa65b63372d20a82, type: 3}
+      propertyPath: oneOff
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a2a5ab94d6400844a73af06b98e5205, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 372ba341f21ca6b4aa65b63372d20a82, type: 3}
 --- !u!1 &1098449154
@@ -4479,11 +4483,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397531033805620121, guid: 16ebec8493b2aae4bbf0ba372f583ceb, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.4657569
+      value: 0.46849635
       objectReference: {fileID: 0}
     - target: {fileID: 7397531033805620121, guid: 16ebec8493b2aae4bbf0ba372f583ceb, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.6145495
+      value: 0.61911523
       objectReference: {fileID: 0}
     - target: {fileID: 7397531033805620121, guid: 16ebec8493b2aae4bbf0ba372f583ceb, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4495,11 +4499,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7397531033805620121, guid: 16ebec8493b2aae4bbf0ba372f583ceb, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -131.49353
+      value: -120.974
       objectReference: {fileID: 0}
     - target: {fileID: 7397531033805620121, guid: 16ebec8493b2aae4bbf0ba372f583ceb, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1279.8701
+      value: 1297.4026
       objectReference: {fileID: 0}
     - target: {fileID: 7397531035154444316, guid: 16ebec8493b2aae4bbf0ba372f583ceb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5862,10 +5866,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1862003842}
-  - component: {fileID: 1862003841}
-  - component: {fileID: 1862003845}
-  - component: {fileID: 1862003844}
   - component: {fileID: 1862003843}
+  - component: {fileID: 1862003841}
+  - component: {fileID: 1862003844}
+  - component: {fileID: 1862003845}
   m_Layer: 0
   m_Name: NPC sprites_0
   m_TagString: Untagged
@@ -6678,7 +6682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7909491619157110291, guid: efa217213a39cf1488ecdc9b596f1461, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7909491619157110291, guid: efa217213a39cf1488ecdc9b596f1461, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6987,10 +6991,6 @@ MonoBehaviour:
   SoundAudioClipArray:
   - sound: 0
     audioClip: {fileID: 8300000, guid: e6188e5e07661f34a954383afb46c553, type: 3}
-  s_HealthPotion: {fileID: 0}
-  s_Stone: {fileID: 0}
-  s_Stick: {fileID: 0}
-  s_Flower: {fileID: 0}
 --- !u!1 &5773681472805914686
 GameObject:
   m_ObjectHideFlags: 0
@@ -7154,7 +7154,7 @@ Transform:
   - {fileID: 5773681473720757059}
   - {fileID: 5773681473454559004}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5773681474506131293
 MonoBehaviour:
