@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 252362462}
   - component: {fileID: 252362461}
   - component: {fileID: 252362459}
-  - component: {fileID: 252362460}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -176,26 +175,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: NPC is saying that ... ...
---- !u!114 &252362460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 252362458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69b7cee6b8836f64ba56f071d7499bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Blue Bird
-    sentences:
-    - Aye! Ya a merchant?
-    - Me am missing some material for the upcoming campfire at my place.
-    - Me am pretty sure Me needs some sticks and stones, do ya happen to have some
-      of these?
-    - Ya know where I can get some sticks and stones?
 --- !u!222 &252362461
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -517,6 +496,7 @@ GameObject:
   - component: {fileID: 1639130409}
   - component: {fileID: 1639130411}
   - component: {fileID: 1639130410}
+  - component: {fileID: 1639130412}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -633,6 +613,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639130407}
   m_CullTransparentMesh: 1
+--- !u!114 &1639130412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639130407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b7cee6b8836f64ba56f071d7499bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Jason
+    sentences:
+    - Aye! Ya a merchant?
+    - Me am missing some material for the upcoming campfire at my place.
+    - Me am pretty sure me need some sticks and stones, do ya happen to have some
+      of these?
+    - Ya know where I can get some sticks and stones?
 --- !u!1 &1709434030
 GameObject:
   m_ObjectHideFlags: 0
