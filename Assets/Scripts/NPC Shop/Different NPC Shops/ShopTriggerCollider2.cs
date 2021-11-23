@@ -18,11 +18,16 @@ public class ShopTriggerCollider2 : MonoBehaviour {
         }
     }
 
-    private void Update(){
-        if(Input.GetKeyDown(KeyCode.C) && canShow){
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C) && canShow)
+        {
             uiShop.Show(shopCustomer1);
             PlayerController.instance.PromptDeactivate();
-            
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && canShow)
+        {
+            gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(); // Triggers dialogue that this gameObject is attached to
         }
     }
 

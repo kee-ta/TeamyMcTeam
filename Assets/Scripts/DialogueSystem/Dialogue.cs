@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Make the class serializable to show up in the Inspectorso that we can edit it
+// Make the class serializable to show up in the Inspector so that we can edit it
 [System.Serializable]
 
 public class Dialogue

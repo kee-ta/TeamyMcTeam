@@ -23,6 +23,10 @@ public class ShopTriggerCollider : MonoBehaviour {
             uiShop.Show(shopCustomer1);
             PlayerController.instance.PromptDeactivate();
         }
+        if (Input.GetKeyDown(KeyCode.Q) && canShow)
+        {
+            gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(); // Triggers dialogue that this gameObject is attached to
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collider) {
