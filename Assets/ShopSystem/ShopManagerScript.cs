@@ -11,17 +11,15 @@ public class ShopManagerScript : MonoBehaviour
     public GameObject SellButton2;
 
     public int[,] shopItems = new int[4, 6]; // refers to player inventory
-    public int coins = 20; // refers to existing player currency
-    public float salesLeft = 6; // refers to current sales
-    private float salesMade = 0;
+    public int coins; // refers to existing player currency
+    public int salesLeft = 6; // refers to current sales
+    private int salesMade = 0;
 
     public Text DayTxt;
     public Text CoinsTxt; // referring to coins text object
     public Text SalesLeftTxt; // referring to sales left text object
-    public Text SalesMadeTxt; // referring to sales made text object
     public Text RandTxt; // refers to the first sell order text object
     public Text RandTxt2; // refers to the second sell order text object
-    public Text HighscoreTxt;
 
     public Text StickCount; // refers to inventory number of stick
     public Text StoneCount; // refers to inventory number of stone
@@ -71,27 +69,36 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[1, 4] = 4; // Flowers
 
         //Price
-        shopItems[2, 1] = Random.Range(2, 5); // cost of buying first type of item
-        shopItems[2, 2] = Random.Range(2, 5); // cost of buying second type of item
-        shopItems[2, 3] = Random.Range(2, 5); // cost of buying third type of item
-        shopItems[2, 4] = Random.Range(2, 5); // cost of buying fourth type of item
+        shopItems[2, 1] = Random.Range(1, 5); // cost of buying first type of item
+        shopItems[2, 2] = Random.Range(1, 5); // cost of buying second type of item
+        shopItems[2, 3] = Random.Range(1, 5); // cost of buying third type of item
+        shopItems[2, 4] = Random.Range(1, 5); // cost of buying fourth type of item
 
         //Quantity
-        shopItems[3, 1] = 0; // current amount of first type of item
-        shopItems[3, 2] = 0; // current amount of second type of item
-        shopItems[3, 3] = 0; // current amount of third type of item
-        shopItems[3, 4] = 0; // current amount of fourth type of item
+        shopItems[3, 1] = PlayerPrefs.GetInt("stick");
+        shopItems[3, 2] = PlayerPrefs.GetInt("stone");
+        shopItems[3, 3] = PlayerPrefs.GetInt("leaf");
+        shopItems[3, 4] = PlayerPrefs.GetInt("flower");
+        coins = PlayerPrefs.GetInt("coins");
     }
 
     void Update()
     {
-        if (coins > PlayerPrefs.GetInt("highscore"))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            highscore = coins;
-            HighscoreTxt.text = "Highscore: " + coins;
-            PlayerPrefs.SetInt("highscore", highscore);
-            PlayerPrefs.Save();
+            salesLeft = 6;
+            shopItems[3, 1] = 0;
+            shopItems[3, 2] = 0;
+            shopItems[3, 3] = 0;
+            shopItems[3, 4] = 0;
+            coins = 30;
         }
+
+        PlayerPrefs.SetInt("stick", shopItems[3, 1]);
+        PlayerPrefs.SetInt("stone", shopItems[3, 2]);
+        PlayerPrefs.SetInt("leaf", shopItems[3, 3]);
+        PlayerPrefs.SetInt("flower", shopItems[3, 4]);
+        PlayerPrefs.SetInt("coins", coins);
 
         if (shopItems[3, randid1] >= rand1 && shopItems[3, randid2] >= rand2)
             GameObject.Find("SellButton").GetComponent<Button>().interactable = true;
@@ -133,19 +140,15 @@ public class ShopManagerScript : MonoBehaviour
         if (randid4 == 3) { fourth = "Leaf"; }
         if (randid4 == 4) { fourth = "Flower"; }
 
-        RandTxt.text = rand1 + " " + first + " and " + rand2 + " "+ second + " for $" + saleprice1; // displays sell order 1
+        RandTxt.text = rand1 + " " + first + " and " + rand2 + " " + second + " for $" + saleprice1; // displays sell order 1
         RandTxt2.text = rand3 + " " + third + " and " + rand4 + " " + fourth + " for $" + saleprice2; // displays sell order 2
-        DayTxt.text = "Day: " + daycount;
-        CoinsTxt.text = "Coins Available: $" + coins; // displays current coins player has
-        SalesLeftTxt.text = "Sales Left: " + salesLeft; // diplays number of sales left
-        SalesMadeTxt.text = "Total Sales: " + salesMade; // diplays number of sales made
-        StickCount.text = "Sticks: " + shopItems[3, 1]; // displays quantity of sticks in inventory
-        StoneCount.text = "Stones: " + shopItems[3, 2]; // displays quantity of stone in inventory
-        LeafCount.text = "Leaves: " + shopItems[3, 3]; // displays quantity of leaf in inventory
-        FlowerCount.text = "Flowers: " + shopItems[3, 4]; // displays quantity of flower in inventory
-        HighscoreTxt.text = "Highscore: " + PlayerPrefs.GetInt("highscore");
-
-        //GameObject[] gameObjectArray = GameObject.FindGameObjectsWithTag("sellbutton");
+        DayTxt.text = daycount.ToString();
+        CoinsTxt.text = coins.ToString(); // displays current coins player has
+        SalesLeftTxt.text = salesLeft.ToString(); // diplays number of sales left
+        StickCount.text = shopItems[3, 1].ToString(); // displays quantity of sticks in inventory
+        StoneCount.text = shopItems[3, 2].ToString(); // displays quantity of stone in inventory
+        LeafCount.text = shopItems[3, 3].ToString(); // displays quantity of leaf in inventory
+        FlowerCount.text = shopItems[3, 4].ToString(); // displays quantity of flower in inventory
 
         if (salesLeft == 0) // if no more sales left, find and disable all buttons with "sellbutton" tag (sell orders of customers)
         {
@@ -184,8 +187,6 @@ public class ShopManagerScript : MonoBehaviour
             coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; //subtract coin value with item price
 
             shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]++; //incrase quantity of item by 1
-
-            CoinsTxt.text = "Coins: $" + coins; //update remaining coins value on screen
 
             ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString(); //update item quantity of button after purchase
         }
@@ -295,14 +296,18 @@ public class ShopManagerScript : MonoBehaviour
         GameObject.Find("SellButton2").GetComponent<Button>().interactable = true;
     }
 
-    public void Resethighscore()
-    {
-        PlayerPrefs.SetInt("highscore", 0);
-        HighscoreTxt.text = "Highscore: " + PlayerPrefs.GetInt("highscore");
-    }
-
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void Show()
+    {
+        GameObject.Find("PlayerShopCanvas").SetActive(true);
+    }
+
+    public void Hide()
+    {
+        GameObject.Find("PlayerShopCanvas").SetActive(false);
     }
 }
