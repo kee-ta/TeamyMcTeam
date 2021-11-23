@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable] //Show up in inspector for editing
+// Make the class serializable to show up in the Inspectorso that we can edit it
+[System.Serializable]
 
 public class Dialogue
 {
-    public string name; //Name of NPC we are dealing with
+    // An object that we can pass into the DialogueManager whenever we want to start a new dialogue
+    // Hosts all information that we need about a single dialogue
 
-    [TextArea(3,10)] //Amount of lines the text area will use
-    public string[] sentences; //Sentences we will load into Queue
+    public string name; // Name of the NPC we are talking with
+
+    // Makes space for longer sentences
+    [TextArea(3,10)] // Minimum amount of lines, Maximum amount of lines
+
+    public string[] sentences; // Sentences that we will load into our queue
+
+
 }

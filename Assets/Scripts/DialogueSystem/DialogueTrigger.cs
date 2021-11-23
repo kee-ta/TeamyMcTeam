@@ -2,23 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//This script sits on an object and allows us to trigger a new dialogue.
-public class DialogueTrigger : MonoBehaviour 
+// This script will sit on an object and allows us to trigger a dialogue
+public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
-    public void Update()
+    public void TriggerDialogue()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) == true)
         {
-            TriggerDialogue();
-        }
-    }
-
-    public void TriggerDialogue() //Feed variable to Dialogue Manager
-    {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-
+        }   
     }
 
 }

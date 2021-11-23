@@ -10,8 +10,9 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
     
-    //Keeps track of all the sentences in our current dialogue
-    private Queue<string> sentences; 
+    // A variable that keeps track of all the sentences in our current dialogue
+    private Queue<string> sentences;
+
 
     void Start()
     {
@@ -21,50 +22,54 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
-        
+
         nameText.text = dialogue.name;
 
-        sentences.Clear(); // Clears all the sentences from the previous conversations
+        // Still needs to load in all the sentences
+        sentences.Clear(); // First, clear all the sentences that were there from the previous conversation
 
-        foreach(string sentence in dialogue.sentences) // Loops through all the sentences in our dialogue and display them
+        // Goes through all of the strings in our dialogue.sentences[] 
+        foreach (string sentence in dialogue.sentences)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(sentence); // Adds sentence to queue
         }
 
-        DisplayNextSentence();
-
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DisplayNextSentence(); // Display first sentence
+        }
     }
-
-    public void DisplayNextSentence() // End conversation if no more sentences left to say
+    
+    public void DisplayNextSentence()
     {
-        if (sentences.Count == 0)
+        // Check if there are more sentences in the queue
+        if (sentences.Count == 0) // Reach the end of the queue
         {
             EndDialogue();
             return;
         }
 
-        string sentence = sentences.Dequeue(); // Sentences left to say
-        StopAllCoroutines(); // Make sure TypeSentence is stopped 
+        // if we still have sentences left to say, wants to get the next sentences in the queue
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
-    
-    IEnumerator TypeSentence(string sentence) // Automatically type sentences 
+
+    IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
 
-        // Loops through all the single characters in sentence
-        foreach (char letter in sentence.ToCharArray()) // ToCharArray() converts string to character array
+        // Loops through all the characters in our sentence
+        foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null; 
+            yield return null;
         }
-
     }
 
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
     }
-
 
 }
