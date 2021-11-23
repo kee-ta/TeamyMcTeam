@@ -44,8 +44,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         string sentence = sentences.Dequeue(); // Sentences left to say
-        // StopAllCoroutines(); // Make sure TypeSentence is stopped 
-        // StartCoroutine(TypeSentence(sentence));
+        StopAllCoroutines(); // Make sure TypeSentence is stopped 
+        StartCoroutine(TypeSentence(sentence));
     }
     
     IEnumerator TypeSentence(string sentence) // Automatically type sentences 
