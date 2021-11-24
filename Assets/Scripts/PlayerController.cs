@@ -32,8 +32,8 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     private Rigidbody2D rgbd;
     private bool isIdle = true;
 
-    private int goldAmount= 30;
-    private int stickAmount, leafAmount, stoneAmount, flowerAmount;
+    public static int goldAmount= 30;
+    public static int stickAmount, leafAmount, stoneAmount, flowerAmount;
     
     Vector2 playerMove;
     // Start is called before the first frame update

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using static PlayerController;
 
 public class ShopManagerScript : MonoBehaviour
 {
@@ -59,8 +60,8 @@ public class ShopManagerScript : MonoBehaviour
         rand3 = Random.Range(1, 3); // amount of item required for first type of item for second sell order
         rand4 = Random.Range(1, 3); // amount of item required for second type of item for second sell order
 
-        saleprice1 = Random.Range(8, 13); // amount given for fulfilling first sell order
-        saleprice2 = Random.Range(8, 13); // amount given for fulfilling second sell ordeer
+        saleprice1 = Random.Range(15, 31); // amount given for fulfilling first sell order
+        saleprice2 = Random.Range(15, 31); // amount given for fulfilling second sell ordeer
 
         //Item IDs
         shopItems[1, 1] = 1; // Sticks
@@ -75,30 +76,15 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[2, 4] = Random.Range(1, 5); // cost of buying fourth type of item
 
         //Quantity
-        shopItems[3, 1] = PlayerPrefs.GetInt("stick");
-        shopItems[3, 2] = PlayerPrefs.GetInt("stone");
-        shopItems[3, 3] = PlayerPrefs.GetInt("leaf");
-        shopItems[3, 4] = PlayerPrefs.GetInt("flower");
-        coins = PlayerPrefs.GetInt("coins");
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            salesLeft = 6;
-            shopItems[3, 1] = 0;
-            shopItems[3, 2] = 0;
-            shopItems[3, 3] = 0;
-            shopItems[3, 4] = 0;
-            coins = 30;
-        }
-
-        PlayerPrefs.SetInt("stick", shopItems[3, 1]);
-        PlayerPrefs.SetInt("stone", shopItems[3, 2]);
-        PlayerPrefs.SetInt("leaf", shopItems[3, 3]);
-        PlayerPrefs.SetInt("flower", shopItems[3, 4]);
-        PlayerPrefs.SetInt("coins", coins);
+        shopItems[3, 1] = PlayerController.stoneAmount;
+        shopItems[3, 2] = PlayerController.leafAmount;
+        shopItems[3, 3] = PlayerController.flowerAmount;
+        shopItems[3, 4] = PlayerController.stickAmount;
+        coins = PlayerController.goldAmount;
 
         if (shopItems[3, randid1] >= rand1 && shopItems[3, randid2] >= rand2)
             GameObject.Find("SellButton").GetComponent<Button>().interactable = true;
@@ -120,35 +106,35 @@ public class ShopManagerScript : MonoBehaviour
             randid4 = Random.Range(1, 5);
         }
 
-        if (randid1 == 1) { first = "Stick"; } // if first type of first sell order is 1, representing string is "Stick"
-        if (randid1 == 2) { first = "Stone"; }
-        if (randid1 == 3) { first = "Leaf"; }
-        if (randid1 == 4) { first = "Flower"; }
+        if (randid1 == 1) { first = "Stone"; } // if first type of first sell order is 1, representing string is "Stick"
+        if (randid1 == 2) { first = "leaf"; }
+        if (randid1 == 3) { first = "Flower"; }
+        if (randid1 == 4) { first = "Stick"; }
 
-        if (randid2 == 1) { second = "Stick"; } // if first type of second sell order is 1, representing string is "Stick"
-        if (randid2 == 2) { second = "Stone"; }
-        if (randid2 == 3) { second = "Leaf"; }
-        if (randid2 == 4) { second = "Flower"; }
+        if (randid2 == 1) { second = "Stone"; } // if first type of second sell order is 1, representing string is "Stick"
+        if (randid2 == 2) { second = "Leaf"; }
+        if (randid2 == 3) { second = "Flower"; }
+        if (randid2 == 4) { second = "Stick"; }
 
-        if (randid3 == 1) { third = "Stick"; } // if first type of second sell order is 1, representing string is "Stick"
-        if (randid3 == 2) { third = "Stone"; }
-        if (randid3 == 3) { third = "Leaf"; }
-        if (randid3 == 4) { third = "Flower"; }
+        if (randid3 == 1) { third = "Stone"; } // if first type of second sell order is 1, representing string is "Stick"
+        if (randid3 == 2) { third = "Leaf"; }
+        if (randid3 == 3) { third = "Flower"; }
+        if (randid3 == 4) { third = "Stick"; }
 
-        if (randid4 == 1) { fourth = "Stick"; } // if second type of second sell order is 1, representing string is "Stick"
-        if (randid4 == 2) { fourth = "Stone"; }
-        if (randid4 == 3) { fourth = "Leaf"; }
-        if (randid4 == 4) { fourth = "Flower"; }
+        if (randid4 == 1) { fourth = "Stone"; } // if second type of second sell order is 1, representing string is "Stick"
+        if (randid4 == 2) { fourth = "Leaf"; }
+        if (randid4 == 3) { fourth = "Flower"; }
+        if (randid4 == 4) { fourth = "Stick"; }
 
         RandTxt.text = rand1 + " " + first + " and " + rand2 + " " + second + " for $" + saleprice1; // displays sell order 1
         RandTxt2.text = rand3 + " " + third + " and " + rand4 + " " + fourth + " for $" + saleprice2; // displays sell order 2
         DayTxt.text = daycount.ToString();
         CoinsTxt.text = coins.ToString(); // displays current coins player has
         SalesLeftTxt.text = salesLeft.ToString(); // diplays number of sales left
-        StickCount.text = shopItems[3, 1].ToString(); // displays quantity of sticks in inventory
-        StoneCount.text = shopItems[3, 2].ToString(); // displays quantity of stone in inventory
-        LeafCount.text = shopItems[3, 3].ToString(); // displays quantity of leaf in inventory
-        FlowerCount.text = shopItems[3, 4].ToString(); // displays quantity of flower in inventory
+        StoneCount.text = shopItems[3, 1].ToString(); // displays quantity of sticks in inventory
+        LeafCount.text = shopItems[3, 2].ToString(); // displays quantity of stone in inventory
+        FlowerCount.text = shopItems[3, 3].ToString(); // displays quantity of leaf in inventory
+        StickCount.text = shopItems[3, 4].ToString(); // displays quantity of flower in inventory
 
         if (salesLeft == 0) // if no more sales left, find and disable all buttons with "sellbutton" tag (sell orders of customers)
         {
@@ -170,12 +156,22 @@ public class ShopManagerScript : MonoBehaviour
     {
         salesMade++;
         StartCoroutine(Tradeplus());
+        PlayerController.stoneAmount = shopItems[3, 1];
+        PlayerController.leafAmount = shopItems[3, 2];
+        PlayerController.flowerAmount = shopItems[3, 3];
+        PlayerController.stickAmount = shopItems[3, 4];
+        PlayerController.goldAmount = coins;
     }
 
     public void Sell2() // function for second type of sell order
     {
         salesMade++;
         StartCoroutine(Tradeplus2());
+        PlayerController.stoneAmount = shopItems[3, 1];
+        PlayerController.leafAmount = shopItems[3, 2];
+        PlayerController.flowerAmount = shopItems[3, 3];
+        PlayerController.stickAmount = shopItems[3, 4];
+        PlayerController.goldAmount = coins;
     }
 
     public void Buy() // function for buying items (to have something to sell to customers)
