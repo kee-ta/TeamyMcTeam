@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
              _instance = value;
          }
     }
+
     public event EventHandler OnGoldAmountChanged;
     public float moveSpeed = 4f;
     private Rigidbody2D rgbd;

@@ -60,8 +60,8 @@ public class ShopManagerScript : MonoBehaviour
         rand3 = Random.Range(1, 3); // amount of item required for first type of item for second sell order
         rand4 = Random.Range(1, 3); // amount of item required for second type of item for second sell order
 
-        saleprice1 = Random.Range(15, 31); // amount given for fulfilling first sell order
-        saleprice2 = Random.Range(15, 31); // amount given for fulfilling second sell ordeer
+        saleprice1 = Random.Range(20, 31); // amount given for fulfilling first sell order
+        saleprice2 = Random.Range(20, 31); // amount given for fulfilling second sell ordeer
 
         //Item IDs
         shopItems[1, 1] = 1; // Sticks
@@ -107,7 +107,7 @@ public class ShopManagerScript : MonoBehaviour
         }
 
         if (randid1 == 1) { first = "Stone"; } // if first type of first sell order is 1, representing string is "Stick"
-        if (randid1 == 2) { first = "leaf"; }
+        if (randid1 == 2) { first = "Leaf"; }
         if (randid1 == 3) { first = "Flower"; }
         if (randid1 == 4) { first = "Stick"; }
 
