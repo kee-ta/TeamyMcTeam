@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour, IShopCustomer
 {
-    public GameObject interactPrompt;
+    public GameObject buyPrompt;
+    public GameObject dialoguePrompt;
     private static PlayerController _instance;
     public static PlayerController instance {get  
          {
@@ -31,7 +32,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     private Rigidbody2D rgbd;
     private bool isIdle = true;
 
-    private int goldAmount= 500;
+    private int goldAmount= 30;
     private int stickAmount, leafAmount, stoneAmount, flowerAmount;
     
     Vector2 playerMove;
@@ -44,7 +45,8 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         } else {
             _instance = this;
         }
-        interactPrompt.SetActive(false);
+        buyPrompt.SetActive(false);
+        dialoguePrompt.SetActive(false);
         rgbd = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -139,11 +141,19 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     }
 
     public void PromptActivate(){
-        interactPrompt.SetActive(true);
+        buyPrompt.SetActive(true);
     }
 
     public void PromptDeactivate(){
-        interactPrompt.SetActive(false);
+        buyPrompt.SetActive(false);
+    }
+
+    public void PromptDialogueActivate(){
+        dialoguePrompt.SetActive(true);
+    }
+
+    public void PromptDialogueDeactivate(){
+        dialoguePrompt.SetActive(false);
     }
 
 }

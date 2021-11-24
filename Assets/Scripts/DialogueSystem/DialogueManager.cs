@@ -19,6 +19,14 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            DisplayNextSentence(); 
+        }
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("IsOpen", true);
@@ -34,10 +42,7 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence); // Adds sentence to queue
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            DisplayNextSentence(); // Display first sentence
-        }
+        DisplayNextSentence(); // Display first sentence
     }
     
     public void DisplayNextSentence()
@@ -63,7 +68,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;
+            yield return -100; // Speed of the typing effect
         }
     }
 

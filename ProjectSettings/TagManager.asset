@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - sellbutton
   layers:
   - Default
   - TransparentFX
@@ -41,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 2419515755
+    locked: 0
   - name: NPC
     uniqueID: 2600449209
+    locked: 0
+  - name: Player
+    uniqueID: 3280480351
     locked: 0
