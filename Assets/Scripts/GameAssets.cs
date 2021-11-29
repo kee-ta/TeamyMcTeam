@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameAssets : MonoBehaviour
 {
@@ -15,6 +16,11 @@ public class GameAssets : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        Debug.Log("Assests Loaded");
+    }
+
     public AudioClip oneOff;
 
     public SoundAudioClip[] SoundAudioClipArray;
@@ -24,6 +30,4 @@ public class GameAssets : MonoBehaviour
         public SoundManager.Sound sound;
         public AudioClip audioClip;
     }
-
-    public Sprite s_HealthPotion;
 }
