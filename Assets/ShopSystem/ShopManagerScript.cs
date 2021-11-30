@@ -174,18 +174,26 @@ public class ShopManagerScript : MonoBehaviour
         PlayerController.goldAmount = coins;
     }
 
-    public void Buy() // function for buying items (to have something to sell to customers)
+    public void Refuse() // function for first type of sell order
     {
-        GameObject ButtonRef = GameObject.FindGameObjectWithTag("Event").GetComponent<EventSystem>().currentSelectedGameObject;
+        //salesMade++;
+        StartCoroutine(Trademinus());
+        PlayerController.stoneAmount = shopItems[3, 1];
+        PlayerController.leafAmount = shopItems[3, 2];
+        PlayerController.flowerAmount = shopItems[3, 3];
+        PlayerController.stickAmount = shopItems[3, 4];
+        PlayerController.goldAmount = coins;
+    }
 
-        if (coins >= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]) //check if enough coins to buy item (item referenced depends on specific button ID)
-        {
-            coins -= shopItems[2, ButtonRef.GetComponent<ButtonInfo>().ItemID]; //subtract coin value with item price
-
-            shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID]++; //incrase quantity of item by 1
-
-            ButtonRef.GetComponent<ButtonInfo>().QuantityTxt.text = shopItems[3, ButtonRef.GetComponent<ButtonInfo>().ItemID].ToString(); //update item quantity of button after purchase
-        }
+    public void Refuse2() // function for first type of sell order
+    {
+        //salesMade++;
+        StartCoroutine(Trademinus2());
+        PlayerController.stoneAmount = shopItems[3, 1];
+        PlayerController.leafAmount = shopItems[3, 2];
+        PlayerController.flowerAmount = shopItems[3, 3];
+        PlayerController.stickAmount = shopItems[3, 4];
+        PlayerController.goldAmount = coins;
     }
 
     public IEnumerator Tradeplus()
@@ -210,6 +218,26 @@ public class ShopManagerScript : MonoBehaviour
             randid2 = Random.Range(1, 5);
             saleprice1 = Random.Range(8, 13);
         }
+    }
+
+    public IEnumerator Trademinus()
+    {
+        yield return new WaitForSeconds(0.3F);
+        rand1 = Random.Range(1, 3);
+        rand2 = Random.Range(1, 3);
+        randid1 = Random.Range(1, 5);
+        randid2 = Random.Range(1, 5);
+        saleprice1 = Random.Range(8, 13);
+    }
+
+    public IEnumerator Trademinus2()
+    {
+        yield return new WaitForSeconds(0.3F);
+        rand3 = Random.Range(1, 3);
+        rand4 = Random.Range(1, 3);
+        randid3 = Random.Range(1, 5);
+        randid4 = Random.Range(1, 5);
+        saleprice2 = Random.Range(8, 13);
     }
 
     public IEnumerator Tradeplus2()
