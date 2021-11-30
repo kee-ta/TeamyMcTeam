@@ -48,6 +48,9 @@ public class ShopManagerScript : MonoBehaviour
     private int daycount = 1;
     private int highscore;
 
+    private int rand;
+    public Sprite[] Sprite_Pic;
+
     void Start()
     {
         randid1 = Random.Range(1, 5); // first type of item for first sell order
@@ -76,6 +79,8 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[2, 4] = Random.Range(1, 5); // cost of buying fourth type of item
 
         //Quantity
+        Change();
+        Change2();
     }
 
     void Update()
@@ -141,6 +146,18 @@ public class ShopManagerScript : MonoBehaviour
             StartCoroutine(HideAll());
             daycount = 2;
         }
+    }
+
+    public void Change()
+    {
+        rand = Random.Range(0, Sprite_Pic.Length);
+        SellButton.GetComponent<Image>().sprite = Sprite_Pic[rand];
+    }
+
+    public void Change2()
+    {
+        rand = Random.Range(0, Sprite_Pic.Length);
+        SellButton2.GetComponent<Image>().sprite = Sprite_Pic[rand];
     }
 
     public IEnumerator HideAll()
@@ -217,6 +234,7 @@ public class ShopManagerScript : MonoBehaviour
             randid1 = Random.Range(1, 5);
             randid2 = Random.Range(1, 5);
             saleprice1 = Random.Range(8, 13);
+            Change();
         }
     }
 
@@ -228,6 +246,7 @@ public class ShopManagerScript : MonoBehaviour
         randid1 = Random.Range(1, 5);
         randid2 = Random.Range(1, 5);
         saleprice1 = Random.Range(8, 13);
+        Change();
     }
 
     public IEnumerator Trademinus2()
@@ -238,6 +257,7 @@ public class ShopManagerScript : MonoBehaviour
         randid3 = Random.Range(1, 5);
         randid4 = Random.Range(1, 5);
         saleprice2 = Random.Range(8, 13);
+        Change2();
     }
 
     public IEnumerator Tradeplus2()
@@ -261,6 +281,7 @@ public class ShopManagerScript : MonoBehaviour
             randid3 = Random.Range(1, 5);
             randid4 = Random.Range(1, 5);
             saleprice2 = Random.Range(8, 13);
+            Change2();
         }
     }
 
