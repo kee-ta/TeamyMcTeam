@@ -1058,8 +1058,8 @@ GameObject:
   - component: {fileID: 329772781}
   - component: {fileID: 329772780}
   - component: {fileID: 329772779}
-  - component: {fileID: 329772778}
   - component: {fileID: 329772777}
+  - component: {fileID: 329772778}
   m_Layer: 5
   m_Name: SellButton3
   m_TagString: sellbutton
@@ -1085,7 +1085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 650, y: -248}
+  m_AnchoredPosition: {x: 650, y: -250}
   m_SizeDelta: {x: 144.46, y: 135.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!82 &329772777
@@ -1194,7 +1194,7 @@ Animator:
   m_GameObject: {fileID: 329772775}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 34298e8a931ccb54d9274b3a36ba155a, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6c9772026d7e0a841b001291166f57bd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -78115,25 +78115,6 @@ MonoBehaviour:
   m_Text: 'Buy
 
     Stone'
---- !u!95 &3791835972628431776
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3791835972628431778}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1a3b2e813187043489d0b4b9e63a7fa6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3791835972628431777
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78160,8 +78141,8 @@ GameObject:
   - component: {fileID: 3791835972628431783}
   - component: {fileID: 3791835972628431782}
   - component: {fileID: 3791835972628431777}
-  - component: {fileID: 3791835972628431776}
   - component: {fileID: 1307594608}
+  - component: {fileID: 3791835972628431781}
   m_Layer: 5
   m_Name: SellButton
   m_TagString: sellbutton
@@ -78187,7 +78168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -248}
+  m_AnchoredPosition: {x: 150, y: -250}
   m_SizeDelta: {x: 144.46, y: 135.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3791835972628431780
@@ -78198,6 +78179,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3791835972628431778}
   m_CullTransparentMesh: 1
+--- !u!95 &3791835972628431781
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791835972628431778}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 26ec28bd987db774f8a88baeffff50cb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3791835972628431782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80023,8 +80023,8 @@ GameObject:
   - component: {fileID: 3791835973497351225}
   - component: {fileID: 3791835973497351224}
   - component: {fileID: 3791835973497351227}
-  - component: {fileID: 3791835973497351226}
   - component: {fileID: 1873345530}
+  - component: {fileID: 3791835973497351206}
   m_Layer: 5
   m_Name: SellButton2
   m_TagString: sellbutton
@@ -80050,9 +80050,28 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 400, y: -248}
+  m_AnchoredPosition: {x: 400, y: -250}
   m_SizeDelta: {x: 144.46, y: 135.04}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &3791835973497351206
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3791835973497351204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 281da07b73c743e45aecd83f09cbcc3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3791835973497351224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80163,25 +80182,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &3791835973497351226
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3791835973497351204}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 34298e8a931ccb54d9274b3a36ba155a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &3791835973497351227
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@ public class slide : MonoBehaviour
     {
         GameObject.Find("SellButton").GetComponent<Button>().interactable = false;
         HideCustomer();
-        yield return new WaitForSeconds(1F);
+        yield return new WaitForSeconds(2F);
         HideCustomer();
         GameObject.Find("SellButton").GetComponent<Button>().interactable = true;
     }
