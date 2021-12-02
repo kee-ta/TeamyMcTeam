@@ -6,6 +6,7 @@ TagManager:
   tags:
   - sellbutton
   - playershop
+  - refuse
   layers:
   - Default
   - TransparentFX

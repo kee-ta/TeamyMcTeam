@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerShopTriggerCollider : MonoBehaviour
 {
     public GameObject PlayerShopCanvas;
-
-
-    [SerializeField] private UI_Shop_2 uiShop;
+    public GameObject player;
 
     private IShopCustomer shopCustomer1;
     private bool canShow = false;
@@ -27,6 +25,7 @@ public class PlayerShopTriggerCollider : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.C) && canShow)
         {
+            player.SetActive(false);
             PlayerShopCanvas.SetActive(true);
             PlayerController.instance.PromptDialogueDeactivate();
         }

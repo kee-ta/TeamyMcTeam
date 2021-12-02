@@ -8,6 +8,9 @@ using static PlayerController;
 
 public class ShopManagerScript : MonoBehaviour
 {
+    public GameObject player;
+    public GameObject PlayerShopCanvas;
+
     public GameObject SellButton;
     public GameObject SellButton2;
     public GameObject SellButton3;
@@ -15,7 +18,7 @@ public class ShopManagerScript : MonoBehaviour
     public int[,] shopItems = new int[4, 6]; // refers to player inventory
     public int coins; // refers to existing player currency
     public int salesLeft = 6; // refers to current sales
-    private int salesMade = 0;
+    private int refuseMade = 0;
 
     public Text DayTxt;
     public Text CoinsTxt; // referring to coins text object
@@ -34,7 +37,7 @@ public class ShopManagerScript : MonoBehaviour
     private int randid3; // refers to the first type of item in the second sell order
     private int randid4; //refers to the second type of item in the second sell order
     private int randid5; // refers to the first type of item in the third sell order
-    private int randid6;// refers to the second type of item in the third sell order
+    private int randid6; // refers to the second type of item in the third sell order
 
     private int rand1; // refers to the amount of the first type of item in the first sell order
     private int rand2; // refers to the amount of the second type of item in the first sell order
@@ -180,8 +183,55 @@ public class ShopManagerScript : MonoBehaviour
         if (salesLeft == 0) // if no more sales left, find and disable all buttons with "sellbutton" tag (sell orders of customers)
         {
             StartCoroutine(HideAll());
-            daycount = 2;
         }
+
+        if (daycount == 4) // if no more sales left, find and disable all buttons with "sellbutton" tag (sell orders of customers)
+        {
+            //play ending cutscene
+        }
+
+        if (refuseMade == 3)
+        {
+            GameObject[] gameObjectArray = GameObject.FindGameObjectsWithTag("refuse");
+
+            foreach (GameObject button in gameObjectArray)
+            {
+                button.GetComponent<Button>().interactable = false;
+            }
+        }
+        else
+        {
+            GameObject[] gameObjectArray = GameObject.FindGameObjectsWithTag("refuse");
+
+            foreach (GameObject button in gameObjectArray)
+            {
+                button.GetComponent<Button>().interactable = true;
+            }
+        }
+    }
+
+    public void Teleport()
+    {
+        player.SetActive(true);
+        player.transform.position = new Vector3(2, -2, 0);
+        daycount++;
+        salesLeft = 6;
+        rand1 = Random.Range(1, 2);
+        rand2 = Random.Range(1, 2);
+        randid1 = Random.Range(1, 5);
+        randid2 = Random.Range(1, 5);
+        saleprice1 = Random.Range(8, 13);
+        rand3 = Random.Range(1, 2);
+        rand4 = Random.Range(1, 2);
+        randid3 = Random.Range(1, 5);
+        randid4 = Random.Range(1, 5);
+        saleprice2 = Random.Range(8, 13);
+        rand5 = Random.Range(1, 2);
+        rand6 = Random.Range(1, 2);
+        randid5 = Random.Range(1, 5);
+        randid6 = Random.Range(1, 5);
+        saleprice3 = Random.Range(8, 13);
+        PlayerShopCanvas.SetActive(false);
     }
 
     public void Change()
@@ -215,7 +265,6 @@ public class ShopManagerScript : MonoBehaviour
 
     public void Sell() // function for first type of sell order
     {
-        salesMade++;
         StartCoroutine(Tradeplus());
         PlayerController.stoneAmount = shopItems[3, 1];
         PlayerController.leafAmount = shopItems[3, 2];
@@ -226,7 +275,6 @@ public class ShopManagerScript : MonoBehaviour
 
     public void Sell2() // function for second type of sell order
     {
-        salesMade++;
         StartCoroutine(Tradeplus2());
         PlayerController.stoneAmount = shopItems[3, 1];
         PlayerController.leafAmount = shopItems[3, 2];
@@ -237,7 +285,6 @@ public class ShopManagerScript : MonoBehaviour
 
     public void Sell3() // function for second type of sell order
     {
-        salesMade++;
         StartCoroutine(Tradeplus3());
         PlayerController.stoneAmount = shopItems[3, 1];
         PlayerController.leafAmount = shopItems[3, 2];
@@ -248,7 +295,7 @@ public class ShopManagerScript : MonoBehaviour
 
     public void Refuse() // function for first type of sell order
     {
-        //salesMade++;
+        refuseMade++;
         StartCoroutine(Trademinus());
         PlayerController.stoneAmount = shopItems[3, 1];
         PlayerController.leafAmount = shopItems[3, 2];
@@ -259,7 +306,7 @@ public class ShopManagerScript : MonoBehaviour
 
     public void Refuse2() // function for first type of sell order
     {
-        //salesMade++;
+        refuseMade++;
         StartCoroutine(Trademinus2());
         PlayerController.stoneAmount = shopItems[3, 1];
         PlayerController.leafAmount = shopItems[3, 2];
@@ -270,7 +317,7 @@ public class ShopManagerScript : MonoBehaviour
 
     public void Refuse3() // function for first type of sell order
     {
-        //salesMade++;
+        refuseMade++;
         StartCoroutine(Trademinus3());
         PlayerController.stoneAmount = shopItems[3, 1];
         PlayerController.leafAmount = shopItems[3, 2];
