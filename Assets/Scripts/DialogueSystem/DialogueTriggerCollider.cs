@@ -20,7 +20,7 @@ public class DialogueTriggerCollider : MonoBehaviour
     {
         if (collision.gameObject)
         {
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(); // Triggers dialogue that this gameObject is attached to
             }

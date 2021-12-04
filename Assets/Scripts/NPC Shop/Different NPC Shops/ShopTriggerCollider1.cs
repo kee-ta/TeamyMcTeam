@@ -30,7 +30,7 @@ public class ShopTriggerCollider1 : MonoBehaviour {
             isShowingShop = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.Q) && canShow)
+        if (Input.GetKeyDown(KeyCode.E) && canShow)
         {
             PlayerController.instance.PromptDialogueDeactivate();
             gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(); // Triggers dialogue that this gameObject is attached to
