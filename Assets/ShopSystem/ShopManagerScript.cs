@@ -79,9 +79,9 @@ public class ShopManagerScript : MonoBehaviour
         rand5 = Random.Range(1, 2); // amount of item required for first type of item for third sell order
         rand6 = Random.Range(1, 2); // amount of item required for second type of item for third sell order
 
-        saleprice1 = Random.Range(20, 31); // amount given for fulfilling first sell order
-        saleprice2 = Random.Range(20, 31); // amount given for fulfilling second sell order
-        saleprice3 = Random.Range(20, 31); // amount given for fulfilling third sell order
+        saleprice1 = Random.Range(12, 25); // amount given for fulfilling first sell order
+        saleprice2 = Random.Range(12, 25); // amount given for fulfilling second sell order
+        saleprice3 = Random.Range(12, 25); // amount given for fulfilling third sell order
 
         //Item IDs
         shopItems[1, 1] = 1; // Sticks
@@ -180,14 +180,19 @@ public class ShopManagerScript : MonoBehaviour
         FlowerCount.text = shopItems[3, 3].ToString(); // displays quantity of leaf in inventory
         StickCount.text = shopItems[3, 4].ToString(); // displays quantity of flower in inventory
 
-        if (salesLeft == 0) // if no more sales left, find and disable all buttons with "sellbutton" tag (sell orders of customers)
+        if (daycount == 3 && salesLeft == 0)
         {
             StartCoroutine(HideAll());
         }
 
-        if (daycount == 4) // if no more sales left, find and disable all buttons with "sellbutton" tag (sell orders of customers)
+        if (salesLeft == 0) // if no more sales left, find and disable all buttons with "sellbutton" tag (sell orders of customers)
         {
-            //play ending cutscene
+            GameObject[] gameObjectArray = GameObject.FindGameObjectsWithTag("sellbutton");
+
+            foreach (GameObject button in gameObjectArray)
+            {
+                button.GetComponent<Button>().interactable = false;
+            }
         }
 
         if (refuseMade == 3)
@@ -212,27 +217,41 @@ public class ShopManagerScript : MonoBehaviour
 
     public void Teleport()
     {
-        player.SetActive(true);
-        player.transform.position = new Vector3(2, -2, 0);
-        daycount++;
-        refuseMade = 0;
-        salesLeft = 6;
-        rand1 = Random.Range(1, 2);
-        rand2 = Random.Range(1, 2);
-        randid1 = Random.Range(1, 5);
-        randid2 = Random.Range(1, 5);
-        saleprice1 = Random.Range(8, 13);
-        rand3 = Random.Range(1, 2);
-        rand4 = Random.Range(1, 2);
-        randid3 = Random.Range(1, 5);
-        randid4 = Random.Range(1, 5);
-        saleprice2 = Random.Range(8, 13);
-        rand5 = Random.Range(1, 2);
-        rand6 = Random.Range(1, 2);
-        randid5 = Random.Range(1, 5);
-        randid6 = Random.Range(1, 5);
-        saleprice3 = Random.Range(8, 13);
-        PlayerShopCanvas.SetActive(false);
+        if (daycount == 3)
+        {
+            if (coins >= 100) //criteria for winning game when clicking on next day in shop on day 3
+            {
+                SceneManager.LoadScene("MainMenu"); //scene for winning game
+            }
+            else
+            {
+                SceneManager.LoadScene("StartMenu"); //scene for losing game
+            }
+        }
+        else
+        {
+            player.SetActive(true);
+            player.transform.position = new Vector3(2, -2, 0);
+            daycount++;
+            refuseMade = 0;
+            salesLeft = 6;
+            rand1 = Random.Range(1, 2);
+            rand2 = Random.Range(1, 2);
+            randid1 = Random.Range(1, 5);
+            randid2 = Random.Range(1, 5);
+            saleprice1 = Random.Range(8, 25);
+            rand3 = Random.Range(1, 2);
+            rand4 = Random.Range(1, 2);
+            randid3 = Random.Range(1, 5);
+            randid4 = Random.Range(1, 5);
+            saleprice2 = Random.Range(8, 25);
+            rand5 = Random.Range(1, 2);
+            rand6 = Random.Range(1, 2);
+            randid5 = Random.Range(1, 5);
+            randid6 = Random.Range(1, 5);
+            saleprice3 = Random.Range(8, 25);
+            PlayerShopCanvas.SetActive(false);
+        }
     }
 
     public void Change()
@@ -347,7 +366,7 @@ public class ShopManagerScript : MonoBehaviour
             rand2 = Random.Range(1, 2);
             randid1 = Random.Range(1, 5);
             randid2 = Random.Range(1, 5);
-            saleprice1 = Random.Range(8, 13);
+            saleprice1 = Random.Range(12, 25);
             Change();
         }
     }
@@ -372,7 +391,7 @@ public class ShopManagerScript : MonoBehaviour
             rand4 = Random.Range(1, 2);
             randid3 = Random.Range(1, 5);
             randid4 = Random.Range(1, 5);
-            saleprice2 = Random.Range(8, 13);
+            saleprice2 = Random.Range(12, 25);
             Change2();
         }
     }
@@ -397,7 +416,7 @@ public class ShopManagerScript : MonoBehaviour
             rand6 = Random.Range(1, 2);
             randid5 = Random.Range(1, 5);
             randid6 = Random.Range(1, 5);
-            saleprice3 = Random.Range(8, 13);
+            saleprice3 = Random.Range(12, 25);
             Change3();
         }
     }
@@ -409,7 +428,7 @@ public class ShopManagerScript : MonoBehaviour
         rand2 = Random.Range(1, 2);
         randid1 = Random.Range(1, 5);
         randid2 = Random.Range(1, 5);
-        saleprice1 = Random.Range(8, 13);
+        saleprice1 = Random.Range(12, 25);
         Change();
     }
 
@@ -420,7 +439,7 @@ public class ShopManagerScript : MonoBehaviour
         rand4 = Random.Range(1, 2);
         randid3 = Random.Range(1, 5);
         randid4 = Random.Range(1, 5);
-        saleprice2 = Random.Range(8, 13);
+        saleprice2 = Random.Range(12, 25);
         Change2();
     }
 
@@ -431,7 +450,7 @@ public class ShopManagerScript : MonoBehaviour
         rand6 = Random.Range(1, 2);
         randid5 = Random.Range(1, 5);
         randid6 = Random.Range(1, 5);
-        saleprice3 = Random.Range(8, 13);
+        saleprice3 = Random.Range(12, 25);
         Change3();
     }
 

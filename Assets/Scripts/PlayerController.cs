@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     }
 
     public event EventHandler OnGoldAmountChanged;
-    public float moveSpeed = 4f;
+    public float moveSpeed = 40f;
     private Rigidbody2D rgbd;
     private bool isIdle = true;
 
