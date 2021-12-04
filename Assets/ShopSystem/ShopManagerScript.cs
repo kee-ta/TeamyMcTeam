@@ -215,6 +215,7 @@ public class ShopManagerScript : MonoBehaviour
         player.SetActive(true);
         player.transform.position = new Vector3(2, -2, 0);
         daycount++;
+        refuseMade = 0;
         salesLeft = 6;
         rand1 = Random.Range(1, 2);
         rand2 = Random.Range(1, 2);
