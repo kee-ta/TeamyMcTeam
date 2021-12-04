@@ -6,7 +6,8 @@ using UnityEngine.Audio;
 public static class SoundManager 
 {
     public enum Sound{
-        PlayerWalkGrass
+        PlayerWalkGrass,
+        PlayerWalkStone
 
     }
 
@@ -40,12 +41,11 @@ public static class SoundManager
     private static AudioClip GetAudioClip(Sound sound){
         foreach(GameAssets.SoundAudioClip soundAudioClip in GameAssets.Instance.SoundAudioClipArray){
             if(soundAudioClip.sound == sound){
-                //sound.volume = soundAudioClip.volume;
-                //sound.pitch = soundAudioClip.pitch;
+                Debug.Log("got a clip");
                 return soundAudioClip.audioClip;
             }
         }
-        Debug.Log("A sound was not found!" + sound);
+        Debug.Log("A sound was not found! " + sound);
         return null;
     }
 
@@ -66,8 +66,19 @@ public static class SoundManager
                     }
                     else{ return false; }
                 } else{ return true;}
-                
-           
+            case Sound.PlayerWalkStone:    
+                if(soundTimerDict.ContainsKey(sound))
+                {
+                    float lastPlayed = soundTimerDict[sound];
+                    float timerMax = .5f;
+
+                    if(lastPlayed + timerMax < Time.time)
+                    {
+                        soundTimerDict[sound] = Time.time;
+                        return true;
+                    }
+                    else{ return false; }
+                } else{ return true;}
         }
     }
 

@@ -7,6 +7,7 @@ public class ShopTriggerCollider1 : MonoBehaviour {
     [SerializeField] private UI_Shop_1 uiShop;
     private IShopCustomer shopCustomer1;
     private bool canShow = false;
+       private bool isShowingShop = false;
     private void OnTriggerEnter2D(Collider2D collider) {
         Debug.Log("Entered Shop Area");
         canShow = true;
@@ -19,8 +20,15 @@ public class ShopTriggerCollider1 : MonoBehaviour {
 
     private void Update(){
         if(Input.GetKeyDown(KeyCode.C) && canShow){
+            if(isShowingShop){
+                uiShop.Hide();
+                isShowingShop = false;
+            }
+            else{
             uiShop.Show(shopCustomer1);
             PlayerController.instance.PromptDialogueDeactivate();
+            isShowingShop = true;
+            }
         }
         if (Input.GetKeyDown(KeyCode.Q) && canShow)
         {
@@ -29,6 +37,7 @@ public class ShopTriggerCollider1 : MonoBehaviour {
             PlayerController.instance.PromptActivate();
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D collider) {
         Debug.Log("Left Shop Area");

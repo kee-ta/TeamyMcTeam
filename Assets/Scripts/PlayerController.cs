@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour, IShopCustomer
 {
     public GameObject buyPrompt;
     public GameObject dialoguePrompt;
+
+    System.Random var = new System.Random();
     private static PlayerController _instance;
     public static PlayerController instance {get  
          {
@@ -61,6 +63,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         MovePlayer();
     }
 
+
     public int GetItemAmount(Item.ItemType itemType){
         switch (itemType) {
         default:
@@ -94,16 +97,25 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         }
         if(Input.GetKey(KeyCode.A)){
             moveX = -1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
         }
         if(Input.GetKey(KeyCode.S)){
             movey = -1;
         }
         if(Input.GetKey(KeyCode.D)){
             moveX = 1;
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         isIdle = moveX == 0 && movey == 0;
          if(!isIdle){
-             SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
+/*              switch(var.Next(2)){
+                case 0:
+                SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
+                break; */
+/*                 case 1: */
+                SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
+/*                 break;
+             } */
          }
     }
 

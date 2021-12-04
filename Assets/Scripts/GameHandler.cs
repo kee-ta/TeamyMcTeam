@@ -5,7 +5,6 @@ using TMPro;
 
 public class GameHandler : MonoBehaviour
 {
-    private bool showingUI = false;
     public TextMeshProUGUI moneyCount;
     public GameObject playerInventoryUI;
     public int playerMoney = 10;
@@ -28,34 +27,23 @@ public class GameHandler : MonoBehaviour
     }
 
     public void ShowInventory(){
-        if(!showingUI){
-        playerInventoryUI.SetActive(true);
         stickQtn.text = PlayerController.instance.GetItemAmount(Item.ItemType.Stick).ToString();
         leafQtn.text = PlayerController.instance.GetItemAmount(Item.ItemType.Leaf).ToString();
         flowerQtn.text = PlayerController.instance.GetItemAmount(Item.ItemType.Flower).ToString();
         stoneQtn.text = PlayerController.instance.GetItemAmount(Item.ItemType.Stone).ToString();
         Debug.Log("Showing Inventory");
-        showingUI = true;
-        }
-        else{
-        playerInventoryUI.SetActive(false);
-        showingUI = false;
-        }
     }
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("GameHandler Started");
         updateMoney();
-        playerInventoryUI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("e")){
-            ShowInventory();
-        }
+        ShowInventory();
         updateMoney();
     }
 }
