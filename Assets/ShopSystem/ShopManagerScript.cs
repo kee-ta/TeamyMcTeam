@@ -219,7 +219,7 @@ public class ShopManagerScript : MonoBehaviour
     {
         if (daycount == 3)
         {
-            if (coins >= 100)
+            if (coins >= 100) //criteria for winning game when clicking on next day in shop on day 3
             {
                 SceneManager.LoadScene("StartMenu"); //scene for winning game
             }
