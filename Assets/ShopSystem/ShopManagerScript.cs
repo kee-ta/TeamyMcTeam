@@ -221,11 +221,11 @@ public class ShopManagerScript : MonoBehaviour
         {
             if (coins >= 100) //criteria for winning game when clicking on next day in shop on day 3
             {
-                SceneManager.LoadScene("StartMenu"); //scene for winning game
+                SceneManager.LoadScene("MainMenu"); //scene for winning game
             }
             else
             {
-                SceneManager.LoadScene("MainMenu"); //scene for losing game
+                SceneManager.LoadScene("StartMenu"); //scene for losing game
             }
         }
         else
