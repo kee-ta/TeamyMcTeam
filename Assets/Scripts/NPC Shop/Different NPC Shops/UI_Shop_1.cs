@@ -35,19 +35,19 @@ public class UI_Shop_1 : MonoBehaviour
 
     private void Start() {
         if(sellLeaf){
-        CreateItemButton(Item.ItemType.Leaf, leafSprite, "Leaf", GetRandomPrice(LeafPrice), 0);
+        CreateItemButton(Item.ItemType.Leaf, leafSprite, "Buy", GetRandomPrice(LeafPrice), 0);
         sellPositionIndex++;
         }
         if(sellStone){
-        CreateItemButton(Item.ItemType.Stone, stoneSprite, "Stone", GetRandomPrice(StonePrice), sellPositionIndex);
+        CreateItemButton(Item.ItemType.Stone, stoneSprite, "Buy", GetRandomPrice(StonePrice), sellPositionIndex);
         sellPositionIndex++;
         }
         if(sellStick){
-        CreateItemButton(Item.ItemType.Stick, stickSprite, "Stick", GetRandomPrice(StickPrice), sellPositionIndex);
+        CreateItemButton(Item.ItemType.Stick, stickSprite, "Buy", GetRandomPrice(StickPrice), sellPositionIndex);
         sellPositionIndex++;
         }
         if(sellFlower){
-        CreateItemButton(Item.ItemType.Flower, flowerSprite, "Flower", GetRandomPrice(FlowerPrice), sellPositionIndex);
+        CreateItemButton(Item.ItemType.Flower, flowerSprite, "Buy", GetRandomPrice(FlowerPrice), sellPositionIndex);
         sellPositionIndex++;
         }
         Hide();
