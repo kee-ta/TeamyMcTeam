@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
 {
     public GameObject buyPrompt;
     public GameObject dialoguePrompt;
-
+    private bool canMove{get; set;}
     System.Random var = new System.Random();
     private static PlayerController _instance;
     public static PlayerController instance {get  
@@ -56,10 +56,12 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     // Update is called once per frame
     void Update()
     {
+        
         UpdateMovement();
     }
      void FixedUpdate()
     {
+        if(canMove)
         MovePlayer();
     }
 
