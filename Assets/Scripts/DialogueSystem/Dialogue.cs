@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// using UnityEngine.UI;
 
 // Make the class serializable to show up in the Inspector so that we can edit it
 [System.Serializable]
@@ -17,5 +18,5 @@ public class Dialogue
 
     public string[] sentences; // Sentences that we will load into our queue
 
-    public GameObject characterImage; // Image of NPC we are talking with
+    public Sprite Character; // Image of NPC we are talking with
 }

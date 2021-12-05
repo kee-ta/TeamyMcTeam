@@ -14,12 +14,12 @@ public class TutorialManager : MonoBehaviour
         {
             if (i == popUpIndex)
             {
-                popUps[popUpIndex].SetActive(true);
+                popUps[i].SetActive(true);
             }
 
             else
             {
-                popUps[popUpIndex].SetActive(false);
+                popUps[i].SetActive(false);
             }
 
         }

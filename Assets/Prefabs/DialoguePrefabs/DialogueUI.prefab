@@ -198,6 +198,7 @@ MonoBehaviour:
     - Me am missing some material for the upcoming campfire at my place.
     - Me am pretty sure me need some sticks and stones, do ya happen to have some
       of these?
+    Character: {fileID: 0}
 --- !u!1 &571822123911265380
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +374,7 @@ MonoBehaviour:
     - Me am missing some material for the upcoming campfire at my place.
     - Me am pretty sure me need some sticks and stones, do ya happen to have some
       of these?
+    Character: {fileID: 0}
 --- !u!1 &571822124262322316
 GameObject:
   m_ObjectHideFlags: 0

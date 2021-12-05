@@ -1825,11 +1825,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 764683718666305562, guid: d3a18b8e678379c4d9fb546f43df4097, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 764683718666305562, guid: d3a18b8e678379c4d9fb546f43df4097, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 764683718666305562, guid: d3a18b8e678379c4d9fb546f43df4097, type: 3}
       propertyPath: m_LocalScale.z
@@ -1878,7 +1878,7 @@ PrefabInstance:
     - target: {fileID: 764683718666305563, guid: d3a18b8e678379c4d9fb546f43df4097, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 310924f2e22a2ec4f81f4b79c8d8a00e, type: 3}
+      objectReference: {fileID: 21300000, guid: ac2e6f08cb55a044cabac8143b24ccc8, type: 3}
     - target: {fileID: 764683718666305564, guid: d3a18b8e678379c4d9fb546f43df4097, type: 3}
       propertyPath: m_Size.x
       value: 2.1153517
@@ -1937,7 +1937,7 @@ MonoBehaviour:
     - What would you like to do?
     - "Wahahaha! What a little snail wasting your time there?\r"
     - "Why make your life so tough when you can just chill?\r"
-    characterImage: {fileID: 0}
+    Character: {fileID: 0}
 --- !u!1 &137753349
 GameObject:
   m_ObjectHideFlags: 0
@@ -68758,7 +68758,7 @@ RectTransform:
   m_Children:
   - {fileID: 1386655478}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -69373,11 +69373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7212307656179506136, guid: c7296253af4d0054bb3b7b80c568adf3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7212307656179506136, guid: c7296253af4d0054bb3b7b80c568adf3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7212307656179506136, guid: c7296253af4d0054bb3b7b80c568adf3, type: 3}
       propertyPath: m_LocalScale.z
@@ -69429,7 +69429,7 @@ PrefabInstance:
       objectReference: {fileID: 159765792}
     - target: {fileID: 7212307656179506138, guid: c7296253af4d0054bb3b7b80c568adf3, type: 3}
       propertyPath: m_Name
-      value: BirdBlueNPC
+      value: BirdBlue
       objectReference: {fileID: 0}
     - target: {fileID: 7212307656179506138, guid: c7296253af4d0054bb3b7b80c568adf3, type: 3}
       propertyPath: m_Layer
@@ -69442,7 +69442,7 @@ PrefabInstance:
     - target: {fileID: 7212307656179506139, guid: c7296253af4d0054bb3b7b80c568adf3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b7fecb22caa6f4c4888f2ce90009bb99, type: 3}
+      objectReference: {fileID: 21300000, guid: 62be40c985059304d9b94d22b8b7a562, type: 3}
     - target: {fileID: 7212307656179506139, guid: c7296253af4d0054bb3b7b80c568adf3, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -69481,7 +69481,7 @@ MonoBehaviour:
     - "Me am missing some material for the upcoming campfire at my place.\r"
     - "Me am pretty sure me need some sticks and stones, do ya happen to have some
       of these?\r"
-    characterImage: {fileID: 0}
+    Character: {fileID: 0}
 --- !u!1 &363977049
 GameObject:
   m_ObjectHideFlags: 0
@@ -69878,11 +69878,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687265224944152962, guid: f831b238949cf2e49863eabfa6d1eb02, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4687265224944152962, guid: f831b238949cf2e49863eabfa6d1eb02, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4687265224944152962, guid: f831b238949cf2e49863eabfa6d1eb02, type: 3}
       propertyPath: m_LocalScale.z
@@ -69931,7 +69931,7 @@ PrefabInstance:
     - target: {fileID: 4687265224944152963, guid: f831b238949cf2e49863eabfa6d1eb02, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3b64f01e267970e46a02485c635b4a09, type: 3}
+      objectReference: {fileID: 21300000, guid: d44725ed1d79d3943bf9c4205e1fc482, type: 3}
     - target: {fileID: 4687265224944152964, guid: f831b238949cf2e49863eabfa6d1eb02, type: 3}
       propertyPath: m_Name
       value: SnakeGreenNPC
@@ -69976,7 +69976,7 @@ MonoBehaviour:
     - "Uhh\u2026 I... I am not stalking\u2026 I jus\u2026 just need some materials\u2026"
     - "Do you have any items that I can use to decorate my house\u2026 some flowers
       perhaps\u2026? Or leaves\u2026?"
-    characterImage: {fileID: 0}
+    Character: {fileID: 0}
 --- !u!1 &409415415
 GameObject:
   m_ObjectHideFlags: 0
@@ -70850,7 +70850,7 @@ RectTransform:
   m_Children:
   - {fileID: 1479699031}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -72680,7 +72680,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Approach the bird and press [ E ]
+  m_Text: Approach the bird and press [ SPACEBAR ]
 --- !u!222 &661059919
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -73078,7 +73078,7 @@ RectTransform:
   m_Children:
   - {fileID: 1241693993}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -73203,38 +73203,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 571822123654126313, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
---- !u!95 &715953689 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 571822123352672114, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
-  m_PrefabInstance: {fileID: 715953688}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &715953690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 571822123911265380, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
   m_PrefabInstance: {fileID: 715953688}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &715953691 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 571822123654126318, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
-  m_PrefabInstance: {fileID: 715953688}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &715953692 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 571822125111066778, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
-  m_PrefabInstance: {fileID: 715953688}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &721896439
 GameObject:
   m_ObjectHideFlags: 0
@@ -73936,6 +73909,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1726124922438732885, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b7fecb22caa6f4c4888f2ce90009bb99, type: 3}
     m_RemovedComponents:
     - {fileID: 571822123654126313, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
@@ -73944,6 +73921,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 571822123911265380, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
   m_PrefabInstance: {fileID: 773539090}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &773539093 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 571822123911265382, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
+  m_PrefabInstance: {fileID: 773539090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773539091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &774105621
 GameObject:
   m_ObjectHideFlags: 0
@@ -74103,7 +74091,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -74118,6 +74106,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1875580340}
   - {fileID: 487619537}
   - {fileID: 1049120096}
   - {fileID: 1344010815}
@@ -74129,7 +74118,6 @@ RectTransform:
   - {fileID: 1166895136}
   - {fileID: 1223860640}
   - {fileID: 1081006390}
-  - {fileID: 1875580340}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -76992,7 +76980,7 @@ RectTransform:
   m_Children:
   - {fileID: 661059917}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -77185,7 +77173,7 @@ RectTransform:
   m_Children:
   - {fileID: 1562508638}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -77638,6 +77626,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1155357336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 571822123654126318, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
+  m_PrefabInstance: {fileID: 773539090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1166642328
 GameObject:
   m_ObjectHideFlags: 0
@@ -77839,7 +77838,7 @@ RectTransform:
   m_Children:
   - {fileID: 167989287}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -78562,7 +78561,7 @@ RectTransform:
   m_Children:
   - {fileID: 1486453079}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -79914,7 +79913,7 @@ RectTransform:
   m_Children:
   - {fileID: 2036549891}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -80065,7 +80064,7 @@ RectTransform:
   m_Children:
   - {fileID: 1990222889}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -80187,7 +80186,7 @@ PrefabInstance:
     - target: {fileID: 7975335778794404836, guid: 441b722460ddf55448bb8f9202d1221a, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: b3b30ec2097b4504db1126867365b652, type: 3}
+      objectReference: {fileID: 21300000, guid: c87c153804d907f498c60a6a3492cd3b, type: 3}
     - target: {fileID: 7975335778794404837, guid: 441b722460ddf55448bb8f9202d1221a, type: 3}
       propertyPath: m_Name
       value: MousePinkNPC
@@ -80210,11 +80209,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7975335778794404839, guid: 441b722460ddf55448bb8f9202d1221a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7975335778794404839, guid: 441b722460ddf55448bb8f9202d1221a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7975335778794404839, guid: 441b722460ddf55448bb8f9202d1221a, type: 3}
       propertyPath: m_LocalScale.z
@@ -80291,7 +80290,7 @@ MonoBehaviour:
     - Hey! What are you looking at?
     - "Yes you! Didn\u2019t you notice me calling you?"
     - Get me some sticks, you little snail! I need them to build my home.
-    characterImage: {fileID: 0}
+    Character: {fileID: 0}
 --- !u!1 &1386655477
 GameObject:
   m_ObjectHideFlags: 0
@@ -80440,7 +80439,7 @@ RectTransform:
   m_Children:
   - {fileID: 1544087592}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -80505,22 +80504,26 @@ PrefabInstance:
     - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: animator
       value: 
-      objectReference: {fileID: 715953689}
+      objectReference: {fileID: 1748874580}
     - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: nameText
       value: 
-      objectReference: {fileID: 715953692}
+      objectReference: {fileID: 1546006778}
     - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: Character
       value: 
-      objectReference: {fileID: 773539091}
+      objectReference: {fileID: 0}
     - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: dialogueText
       value: 
-      objectReference: {fileID: 715953691}
+      objectReference: {fileID: 1155357336}
+    - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
+      propertyPath: characterImage
+      value: 
+      objectReference: {fileID: 773539093}
     - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: Character.Array.size
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: Character.Array.data[0]
@@ -81777,6 +81780,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544087591}
   m_CullTransparentMesh: 1
+--- !u!114 &1546006778 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 571822125111066778, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
+  m_PrefabInstance: {fileID: 773539090}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1552111774
 GameObject:
   m_ObjectHideFlags: 0
@@ -83393,6 +83407,11 @@ RectTransform:
   m_AnchoredPosition: {x: 1.5500183, y: 14.9999695}
   m_SizeDelta: {x: -73.64, y: -52.960007}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1748874580 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 571822123352672114, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
+  m_PrefabInstance: {fileID: 773539090}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1787541659
 GameObject:
   m_ObjectHideFlags: 0
@@ -84190,7 +84209,7 @@ RectTransform:
   m_Children:
   - {fileID: 2105514766}
   m_Father: {fileID: 779935892}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -84360,7 +84379,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 779935892}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1875580341
 MonoBehaviour:
@@ -86248,7 +86267,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Approach the horse and press [ E ]
+  m_Text: Approach the horse and press [ SPACEBAR ]
 --- !u!222 &2036549893
 CanvasRenderer:
   m_ObjectHideFlags: 0

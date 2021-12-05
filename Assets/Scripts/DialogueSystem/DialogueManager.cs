@@ -12,7 +12,9 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
-    public GameObject Character;
+    public Sprite characterImage;
+
+    static public bool dialogueOpen;
     
     // A variable that keeps track of all the sentences in our current dialogue
     private Queue<string> sentences;
@@ -22,13 +24,14 @@ public class DialogueManager : MonoBehaviour
     {
         TypeSound = GetComponent<AudioSource>();
         sentences = new Queue<string>();
+        dialogueOpen = false;
     }
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-            DisplayNextSentence(); 
+            DisplayNextSentence();
         }
 
         if (Input.GetKeyDown(KeyCode.C))
@@ -44,11 +47,12 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
 
-        Character = dialogue.characterImage;
+        characterImage = dialogue.Character;
 
         // Still needs to load in all the sentences
         sentences.Clear(); // First, clear all the sentences that were there from the previous conversation
@@ -60,7 +64,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
-
     }
     
     public void DisplayNextSentence()
@@ -72,10 +75,14 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        // if we still have sentences left to say, wants to get the next sentences in the queue
-        string sentence = sentences.Dequeue();
-        StopAllCoroutines();
-        StartCoroutine(TypeSentence(sentence));
+        if (dialogueOpen == true)
+        {
+            // if we still have sentences left to say, wants to get the next sentences in the queue
+            string sentence = sentences.Dequeue();
+            StopAllCoroutines();
+            StartCoroutine(TypeSentence(sentence));
+        }
+
     }
 
     IEnumerator TypeSentence(string sentence)
@@ -98,6 +105,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        dialogueOpen = false;
     }
 
 }

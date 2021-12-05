@@ -9,7 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     /*
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             TriggerDialogue();
         }

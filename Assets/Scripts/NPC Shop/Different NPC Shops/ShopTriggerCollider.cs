@@ -31,11 +31,12 @@ public class ShopTriggerCollider : MonoBehaviour {
             isShowingShop = true;
             }
         }
-        if (Input.GetKeyDown(KeyCode.E) && canShow)
+        if (Input.GetKeyDown(KeyCode.Space) && canShow && DialogueManager.dialogueOpen == false)
         {
             PlayerController.instance.PromptDialogueDeactivate();
             gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(); // Triggers dialogue that this gameObject is attached to
             PlayerController.instance.PromptActivate();
+            DialogueManager.dialogueOpen = true;
         }
     }
 
