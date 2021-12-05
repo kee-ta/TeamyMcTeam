@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour, IShopCustomer
 {
     public GameObject buyPrompt;
     public GameObject dialoguePrompt;
-    private bool canMove{get; set;}
+    private bool canMove= true;
     System.Random var = new System.Random();
     private static PlayerController _instance;
     public static PlayerController instance {get  
@@ -85,6 +85,9 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         return goldAmount;
     }
 
+    public void StopMovement(bool b){
+        canMove = !b;
+    }
     private void UpdateMovement(){
         playerMove.x = Input.GetAxisRaw("Horizontal");
         playerMove.y = Input.GetAxisRaw("Vertical");
