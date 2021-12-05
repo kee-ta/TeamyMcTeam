@@ -5,7 +5,7 @@ using UnityEngine;
 public class TutorialManager : MonoBehaviour
 {
     public GameObject[] popUps; // A place to drop all of the game key instructions
-    private int popUpIndex;
+    private int popUpIndex = 0;
 
     private void Update()
     {
@@ -35,7 +35,7 @@ public class TutorialManager : MonoBehaviour
 
         else if (popUpIndex == 1)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Space)) // Needs to check if collides with NPC
             {
                 popUpIndex++;
             }
@@ -53,7 +53,70 @@ public class TutorialManager : MonoBehaviour
 
         else if (popUpIndex == 3)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Space)) // Needs to check if collide with NPC
+            {
+                popUpIndex++;
+            }
+
+        }
+
+        else if (popUpIndex == 4)
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                popUpIndex++;
+            }
+
+        }
+
+        else if (popUpIndex == 5)
+        {
+            if (Input.GetMouseButtonDown(0)) // Detects left mouse click
+            {
+                popUpIndex++;
+            }
+
+        }
+
+        else if (popUpIndex == 6)
+        {
+            if (Input.GetKeyDown(KeyCode.C)) 
+            {
+                popUpIndex++;
+            }
+
+        }
+
+        else if (popUpIndex == 7)
+        {
+            if (Input.GetMouseButtonDown(0)) // Detects left mouse click
+            {
+                popUpIndex++;
+            }
+
+        }
+
+        else if (popUpIndex == 8)
+        {
+            if (Input.GetMouseButtonDown(0)) // Detects left mouse click
+            {
+                popUpIndex++;
+            }
+
+        }
+
+        else if (popUpIndex == 9)
+        {
+            if (Input.GetMouseButtonDown(0)) // Detects left mouse click
+            {
+                popUpIndex++;
+            }
+
+        }
+
+        else if (popUpIndex == 10)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 popUpIndex++;
             }
