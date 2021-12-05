@@ -3357,7 +3357,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2
@@ -5930,6 +5930,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 601419802}
   m_CullTransparentMesh: 1
+--- !u!1 &608312220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 571822123911265380, guid: 679ae6300a1fe7b48b1df8d52bb4a281, type: 3}
+  m_PrefabInstance: {fileID: 845613616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &618222111
 GameObject:
   m_ObjectHideFlags: 0
@@ -10926,6 +10931,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1878649337}
     - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
+      propertyPath: Character
+      value: 
+      objectReference: {fileID: 608312220}
+    - target: {fileID: 773181568748979463, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 1878649336}
@@ -12768,7 +12777,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     textureRect:
       serializedVersion: 2

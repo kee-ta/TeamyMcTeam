@@ -5,10 +5,14 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public AudioSource TypeSound;
+
     public Text nameText;
     public Text dialogueText;
 
     public Animator animator;
+
+    public GameObject Character;
     
     // A variable that keeps track of all the sentences in our current dialogue
     private Queue<string> sentences;
@@ -16,6 +20,7 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
+        TypeSound = GetComponent<AudioSource>();
         sentences = new Queue<string>();
     }
 
@@ -44,6 +49,7 @@ public class DialogueManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            sentences.Clear();
             DisplayNextSentence(); // Display next sentence only when spacebar is pressed
         }
 
@@ -71,6 +77,8 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator TypeSentence(string sentence)
     {
+        TypeSound.Play(); // Plays sound at the start
+
         dialogueText.text = "";
 
         // Loops through all the characters in our sentence
@@ -79,6 +87,9 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text += letter;
             yield return -100; // Speed of the typing effect
         }
+
+        TypeSound.Stop(); // Stops the sound when the text stop animating
+        
     }
 
     void EndDialogue()
