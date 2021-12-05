@@ -42,7 +42,16 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence); // Adds sentence to queue
         }
 
-        DisplayNextSentence(); // Display first sentence
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            DisplayNextSentence(); // Display next sentence only when spacebar is pressed
+        }
+
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            EndDialogue(); // End dialogue when C is pressed
+        }
+
     }
     
     public void DisplayNextSentence()
