@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
-    public Sprite characterImage;
+    public Image characterImage;
 
     static public bool dialogueOpen;
     
@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
 
         nameText.text = dialogue.name;
 
-        characterImage = dialogue.Character;
+        characterImage.sprite = dialogue.Character;
 
         // Still needs to load in all the sentences
         sentences.Clear(); // First, clear all the sentences that were there from the previous conversation
