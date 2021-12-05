@@ -80,6 +80,7 @@ public class AudioManager : MonoBehaviour {
 	public void PlayMusic(AudioClip clip, float fadeDuration = 1) {
 		activeMusicSourceIndex = 1 - activeMusicSourceIndex;
 		musicSources [activeMusicSourceIndex].clip = clip;
+		musicSources [activeMusicSourceIndex].loop = true;
 		musicSources [activeMusicSourceIndex].Play ();
 
 		StartCoroutine(AnimateMusicCrossfade(fadeDuration));
