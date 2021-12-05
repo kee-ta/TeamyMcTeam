@@ -30,6 +30,16 @@ public class DialogueManager : MonoBehaviour
         {
             DisplayNextSentence(); 
         }
+
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            EndDialogue(); // End dialogue when C is pressed
+        }
+
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        {
+            EndDialogue(); // End dialogue when player move
+        }
     }
 
     public void StartDialogue(Dialogue dialogue)
@@ -37,6 +47,8 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
+
+        Character = dialogue.characterImage;
 
         // Still needs to load in all the sentences
         sentences.Clear(); // First, clear all the sentences that were there from the previous conversation
@@ -47,16 +59,7 @@ public class DialogueManager : MonoBehaviour
             sentences.Enqueue(sentence); // Adds sentence to queue
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            sentences.Clear();
-            DisplayNextSentence(); // Display next sentence only when spacebar is pressed
-        }
-
-        else if (Input.GetKeyDown(KeyCode.C))
-        {
-            EndDialogue(); // End dialogue when C is pressed
-        }
+        DisplayNextSentence();
 
     }
     

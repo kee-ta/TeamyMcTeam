@@ -17,5 +17,5 @@ public class Dialogue
 
     public string[] sentences; // Sentences that we will load into our queue
 
-
+    public GameObject characterImage; // Image of NPC we are talking with
 }
