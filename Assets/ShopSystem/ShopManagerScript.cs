@@ -57,7 +57,7 @@ public class ShopManagerScript : MonoBehaviour
     private int saleprice2; // refers to the price givin for fulfilling the second sell order
     private int saleprice3; // refers to the price givin for fulfilling the third sell order
 
-    private int daycount = 1;
+    private int daycount = 0;
     private int highscore;
 
     private int rand;
