@@ -158,4 +158,11 @@ public class TutorialManager : MonoBehaviour
 
     }
 
+    public void SkipTutorial()
+    {
+        PlayerController.instance.SetBreadAmount(30);
+        PlayerController.instance.SetInventoryAmount(0);
+        SceneManager.LoadScene("StartMenu 1");
+    }
+
 }
