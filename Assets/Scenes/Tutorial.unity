@@ -1937,6 +1937,7 @@ MonoBehaviour:
     - What would you like to do?
     - "Wahahaha! What a little snail wasting your time there?\r"
     - "Why make your life so tough when you can just chill?\r"
+    - Will you help me get some flowers? They make great accessories.
     Character: {fileID: 21300000, guid: 310924f2e22a2ec4f81f4b79c8d8a00e, type: 3}
 --- !u!1 &137753349
 GameObject:
@@ -69479,8 +69480,7 @@ MonoBehaviour:
 
 '
     - "Me am missing some material for the upcoming campfire at my place.\r"
-    - "Me am pretty sure me need some sticks and stones, do ya happen to have some
-      of these?\r"
+    - Me am pretty sure me need some sticks, do ya happen to have some of these?
     Character: {fileID: 21300000, guid: 5eb39791ea4e2ee4482f9af1b6d0a54d, type: 3}
 --- !u!1 &363977049
 GameObject:
@@ -69974,7 +69974,7 @@ MonoBehaviour:
     - What would you like to do?
     - "Uhh\u2026 Hello\u2026 I heard news that you set up a shop to sell materials...."
     - "Uhh\u2026 I... I am not stalking\u2026 I jus\u2026 just need some materials\u2026"
-    - "Do you have any items that I can use to decorate my house\u2026 some flowers
+    - "Do you have any items that I can use to decorate my house\u2026 some leaves
       perhaps\u2026?"
     Character: {fileID: 21300000, guid: 3b64f01e267970e46a02485c635b4a09, type: 3}
 --- !u!1 &409415415
