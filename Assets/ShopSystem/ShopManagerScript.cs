@@ -109,20 +109,23 @@ public class ShopManagerScript : MonoBehaviour
         shopItems[3, 4] = PlayerController.stickAmount;
         coins = PlayerController.goldAmount;
 
-        if (shopItems[3, randid1] >= rand1 && shopItems[3, randid2] >= rand2)
-            GameObject.Find("SellButton").GetComponent<Button>().interactable = true;
-        else
-            GameObject.Find("SellButton").GetComponent<Button>().interactable = false;
+        if (PlayerShopCanvas.active)
+        {
+            if (shopItems[3, randid1] >= rand1 && shopItems[3, randid2] >= rand2)
+                GameObject.Find("SellButton").GetComponent<Button>().interactable = true;
+            else
+                GameObject.Find("SellButton").GetComponent<Button>().interactable = false;
 
-        if (shopItems[3, randid3] >= rand3 && shopItems[3, randid4] >= rand4)
-            GameObject.Find("SellButton2").GetComponent<Button>().interactable = true;
-        else
-            GameObject.Find("SellButton2").GetComponent<Button>().interactable = false;
+            if (shopItems[3, randid3] >= rand3 && shopItems[3, randid4] >= rand4)
+                GameObject.Find("SellButton2").GetComponent<Button>().interactable = true;
+            else
+                GameObject.Find("SellButton2").GetComponent<Button>().interactable = false;
 
-        if (shopItems[3, randid5] >= rand5 && shopItems[3, randid6] >= rand6)
-            GameObject.Find("SellButton3").GetComponent<Button>().interactable = true;
-        else
-            GameObject.Find("SellButton3").GetComponent<Button>().interactable = false;
+            if (shopItems[3, randid5] >= rand5 && shopItems[3, randid6] >= rand6)
+                GameObject.Find("SellButton3").GetComponent<Button>().interactable = true;
+            else
+                GameObject.Find("SellButton3").GetComponent<Button>().interactable = false;
+        }
 
         while (randid1 == randid2) //ensures that both types of items in sell order are different for first sell order
         {
@@ -180,7 +183,7 @@ public class ShopManagerScript : MonoBehaviour
         FlowerCount.text = shopItems[3, 3].ToString(); // displays quantity of leaf in inventory
         StickCount.text = shopItems[3, 4].ToString(); // displays quantity of flower in inventory
 
-        if (daycount == 3 && salesLeft == 0)
+        if (daycount == 4 && salesLeft == 0)
         {
             StartCoroutine(HideAll());
         }
