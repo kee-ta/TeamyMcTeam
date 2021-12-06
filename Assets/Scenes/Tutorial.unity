@@ -2441,7 +2441,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[ Left mouse click ] on "reject" button
+  m_Text: '[ Left mouse click ] on "refuse" button
 
     if you don''t have the resources'
 --- !u!222 &167989289
@@ -80361,7 +80361,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[ Left mouse click ] to buy'
+  m_Text: '[ LEFT MOUSE CLICK ] to buy stick'
 --- !u!222 &1386655480
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -86269,7 +86269,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Approach the horse and press [ SPACEBAR ]
+  m_Text: Approach the horse
 --- !u!222 &2036549893
 CanvasRenderer:
   m_ObjectHideFlags: 0

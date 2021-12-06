@@ -48,7 +48,10 @@ public class TutorialManager : MonoBehaviour
 
         }
 
-        if (popUpIndex == 0) // If popUpIndex == 0, tutorial has just started
+
+        // If popUpIndex == 0, tutorial has just started
+
+        if (popUpIndex == 0) // Detects movement [WASD]
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
             {
@@ -57,9 +60,9 @@ public class TutorialManager : MonoBehaviour
 
         }
 
-        else if (popUpIndex == 1)
+        else if (popUpIndex == 1) // Detects [ Spacebar ] when collide with bird
         {
-            if (Input.GetKeyDown(KeyCode.Space)) // Needs to check if collides with NPC
+            if (Input.GetKeyDown(KeyCode.Space)) 
             {
                 if(colliders.GetComponent<ShopTriggerCollider>().HasCollision()){
                 popUpIndex++;
@@ -68,7 +71,7 @@ public class TutorialManager : MonoBehaviour
 
         }
 
-        else if (popUpIndex == 2)
+        else if (popUpIndex == 2) // Detects[Spacebar]
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -77,16 +80,16 @@ public class TutorialManager : MonoBehaviour
 
         }
 
-        else if (popUpIndex == 3)
+        else if (popUpIndex == 3) // Detects movement [WASD]
         {
-            if (Input.GetKeyDown(KeyCode.Space)) // Needs to check if collide with NPC
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D)) // Needs to check if collide with NPC
             {
                 popUpIndex++;
             }
 
         }
 
-        else if (popUpIndex == 4)
+        else if (popUpIndex == 4) // Detects C when collide with horse
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
@@ -95,16 +98,16 @@ public class TutorialManager : MonoBehaviour
 
         }
 
-        else if (popUpIndex == 5)
+        else if (popUpIndex == 5) // Checks whether stick is purchased
         {
-            if (PlayerController.instance.GetStickAmt() > 0) // Detects left mouse click
+            if (PlayerController.instance.GetStickAmt() > 0) 
             {
                 popUpIndex++;
             }
 
         }
 
-        else if (popUpIndex == 6)
+        else if (popUpIndex == 6) // Detects C when collide with player's shop
         {
             if (Input.GetKeyDown(KeyCode.C)) 
             {
@@ -113,34 +116,34 @@ public class TutorialManager : MonoBehaviour
 
         }
 
-        else if (popUpIndex == 7)
+        else if (popUpIndex == 7) // Detects[LEFT MOUSE CLICK]
         {
-            if (Input.GetMouseButtonDown(0)) // Detects left mouse click
+            if (Input.GetMouseButtonDown(0))
             {
                 popUpIndex++;
             }
 
         }
 
-        else if (popUpIndex == 8)
+        else if (popUpIndex == 8) // Detects[LEFT MOUSE CLICK]
         {
-            if (Input.GetMouseButtonDown(0)) // Detects left mouse click
+            if (Input.GetMouseButtonDown(0))
             {
                 popUpIndex++;
             }
 
         }
 
-        else if (popUpIndex == 9)
+        else if (popUpIndex == 9) // Detects[LEFT MOUSE CLICK]
         {
-            if (Input.GetMouseButtonDown(0)) // Detects left mouse click
+            if (Input.GetMouseButtonDown(0))
             {
                 popUpIndex++;
             }
 
         }
 
-        else if (popUpIndex == 10)
+        else if (popUpIndex == 10) // Detects [ Spacebar ] and start game
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
