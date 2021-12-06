@@ -9608,7 +9608,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4acbe049d4579d74fbece3ecfbd84846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 1402696416}
 --- !u!1 &1025625910
 GameObject:
   m_ObjectHideFlags: 0
@@ -76673,6 +76672,10 @@ PrefabInstance:
       value: BreadSpent
       objectReference: {fileID: 0}
     - target: {fileID: 5190720723407447540, guid: 101da70c3c684724a8689b6bf0196fa1, type: 3}
+      propertyPath: soundGroups.Array.data[0].group.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190720723407447540, guid: 101da70c3c684724a8689b6bf0196fa1, type: 3}
       propertyPath: soundGroups.Array.data[1].group.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -76728,6 +76731,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5190720723407447543, guid: 101da70c3c684724a8689b6bf0196fa1, type: 3}
+      propertyPath: mainTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: 75ce78151cd25a9409a4b611f1d34d62, type: 3}
+    - target: {fileID: 5190720723407447543, guid: 101da70c3c684724a8689b6bf0196fa1, type: 3}
+      propertyPath: menuTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: 75ce78151cd25a9409a4b611f1d34d62, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 101da70c3c684724a8689b6bf0196fa1, type: 3}
 --- !u!4 &1316292150 stripped
@@ -78524,7 +78535,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.002262473, y: 0.0017666817}
+  m_Offset: {x: -0.017414212, y: -0.14580828}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -78535,7 +78546,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.968365, y: 1.5412369}
+  m_Size: {x: 1.0238845, y: 1.0099667}
   m_EdgeRadius: 0
 --- !u!50 &1498846479
 Rigidbody2D:
