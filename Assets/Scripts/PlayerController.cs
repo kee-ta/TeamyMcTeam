@@ -179,6 +179,14 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         goldAmount = i;
     }
 
+    public void SetInventoryAmount(int j)
+    {
+        stickAmount = j;
+        leafAmount = j;
+        stoneAmount = j;
+        flowerAmount = j;
+    }
+
     public int GetStickAmt()
     {
         return stickAmount;

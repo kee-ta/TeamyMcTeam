@@ -149,6 +149,7 @@ public class TutorialManager : MonoBehaviour
             {
                 popUpIndex++;
                 PlayerController.instance.SetBreadAmount(30);
+                PlayerController.instance.SetInventoryAmount(0);
                 SceneManager.LoadScene("StartMenu1");
                 Debug.Log("Game is starting...");
             }
