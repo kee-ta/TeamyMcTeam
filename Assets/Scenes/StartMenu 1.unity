@@ -6152,7 +6152,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 64ace70b145b75343908c2d33d1699d9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0716029e150c5448be8d336b803e271, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -9786,6 +9786,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4323382543086226, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 92c28becc70813b48b4f238e58818d3f, type: 3}
     - target: {fileID: 773181568748979460, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: m_Name
       value: DialogueManager
@@ -76389,11 +76393,11 @@ PrefabInstance:
     - target: {fileID: 5190720723407447543, guid: 101da70c3c684724a8689b6bf0196fa1, type: 3}
       propertyPath: mainTheme
       value: 
-      objectReference: {fileID: 8300000, guid: 75ce78151cd25a9409a4b611f1d34d62, type: 3}
+      objectReference: {fileID: 8300000, guid: e09e8143070a7f5428fddca0fb8d317d, type: 3}
     - target: {fileID: 5190720723407447543, guid: 101da70c3c684724a8689b6bf0196fa1, type: 3}
       propertyPath: menuTheme
       value: 
-      objectReference: {fileID: 8300000, guid: 75ce78151cd25a9409a4b611f1d34d62, type: 3}
+      objectReference: {fileID: 8300000, guid: 9316dbdd81bb6004c94c0fc00dd335bf, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 101da70c3c684724a8689b6bf0196fa1, type: 3}
 --- !u!4 &1316292150 stripped
@@ -80540,7 +80544,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 64ace70b145b75343908c2d33d1699d9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0716029e150c5448be8d336b803e271, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -80963,7 +80967,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 64ace70b145b75343908c2d33d1699d9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0716029e150c5448be8d336b803e271, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
