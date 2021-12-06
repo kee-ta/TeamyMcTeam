@@ -14,6 +14,8 @@ public class TutorialManager : MonoBehaviour
             Debug.Log("Found you!");
         }
     }
+
+
     private void Update()
     {
         // Want pop up instructions to be displayed in the game view

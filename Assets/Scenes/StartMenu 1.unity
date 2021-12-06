@@ -4806,7 +4806,7 @@ MonoBehaviour:
     - Hey! What are you looking at?
     - "Yes you! Didn\u2019t you notice me calling you?"
     - Get me some sticks, you little snail! I need them to build my home.
-    Character: {fileID: 21300000, guid: a8ade942ac79153428522ba36f34b236, type: 3}
+    Character: {fileID: 21300000, guid: b3b30ec2097b4504db1126867365b652, type: 3}
 --- !u!1 &544078246
 GameObject:
   m_ObjectHideFlags: 0
@@ -78949,7 +78949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6327472952097346738, guid: aa9038fef868c084ca21410fee8d21d5, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6327472952097346738, guid: aa9038fef868c084ca21410fee8d21d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82531,7 +82531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4268099984561749775, guid: 81ca78ca0b20b2349a30fee12d14acc8, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4268099984561749775, guid: 81ca78ca0b20b2349a30fee12d14acc8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -85870,7 +85870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 773181568748979462, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 773181568748979462, guid: 9f1434f438e60e84dbe08519f9ee1b0c, type: 3}
       propertyPath: m_LocalPosition.x
