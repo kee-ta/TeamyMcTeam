@@ -31,7 +31,7 @@ public class GameHandler : MonoBehaviour
         leafQtn.text = PlayerController.instance.GetItemAmount(Item.ItemType.Leaf).ToString();
         flowerQtn.text = PlayerController.instance.GetItemAmount(Item.ItemType.Flower).ToString();
         stoneQtn.text = PlayerController.instance.GetItemAmount(Item.ItemType.Stone).ToString();
-        Debug.Log("Showing Inventory");
+        
     }
     // Start is called before the first frame update
     void Start()

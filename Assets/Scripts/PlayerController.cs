@@ -174,4 +174,13 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         dialoguePrompt.SetActive(false);
     }
 
+    public void SetBreadAmount(int i)
+    {
+        goldAmount = i;
+    }
+
+    public int GetStickAmt()
+    {
+        return stickAmount;
+    }
 }

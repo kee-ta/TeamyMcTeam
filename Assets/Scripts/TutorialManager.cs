@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialManager : MonoBehaviour
 {
@@ -79,7 +80,7 @@ public class TutorialManager : MonoBehaviour
 
         else if (popUpIndex == 5)
         {
-            if (Input.GetMouseButtonDown(0)) // Detects left mouse click
+            if (PlayerController.instance.GetStickAmt() > 0) // Detects left mouse click
             {
                 popUpIndex++;
             }
@@ -127,6 +128,9 @@ public class TutorialManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 popUpIndex++;
+                PlayerController.instance.SetBreadAmount(30);
+                SceneManager.LoadScene("StartMenu1");
+                Debug.Log("Game is starting...");
             }
 
         }

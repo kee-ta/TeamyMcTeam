@@ -74093,7 +74093,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!224 &779935892
 RectTransform:
@@ -84405,6 +84405,7 @@ MonoBehaviour:
   - {fileID: 1166895133}
   - {fileID: 1223860639}
   - {fileID: 1081006389}
+  colliders: {fileID: 0}
 --- !u!1 &1877559941
 GameObject:
   m_ObjectHideFlags: 0
