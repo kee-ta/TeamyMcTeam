@@ -112,16 +112,16 @@ public class PlayerController : MonoBehaviour, IShopCustomer
             gameObject.GetComponent<SpriteRenderer>().flipX = false;
         }
         isIdle = moveX == 0 && movey == 0;
-         if(!isIdle){
+        //if(!isIdle){
 /*              switch(var.Next(2)){
                 case 0:
                 SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
                 break; */
 /*                 case 1: */
-                SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
+                //SoundManager.PlayClip(SoundManager.Sound.PlayerWalkGrass);
 /*                 break;
              } */
-         }
+        //}
     }
 
     public void BoughtItem(Item.ItemType itemType){
