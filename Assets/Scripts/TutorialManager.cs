@@ -2,12 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
     public GameObject[] popUps; // A place to drop all of the game key instructions
     private int popUpIndex = 0;
     public GameObject colliders;
+
+    public Button SellButton;
+
+    void Start()
+    {
+        Button btn = SellButton.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
+    }
+
+    void TaskOnClick()
+    {
+        Debug.Log("You have clicked the button!");
+    }
+
     void Awake(){
         colliders = GameObject.Find("BirdBlue");
         if(colliders){
@@ -138,7 +153,5 @@ public class TutorialManager : MonoBehaviour
         }
 
     }
-
-
 
 }
