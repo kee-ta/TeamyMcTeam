@@ -12,18 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cutscenes.unity
     guid: a8d22675dd39e454e9152d1f96543721
   - enabled: 1
-    path: Assets/Scenes/StartMenu 1.unity
-    guid: f80b50364efd1be419ac9a64f40bb745
-  - enabled: 1
-    path: Assets/Scenes/Victory.unity
-    guid: ac78154e53775984099e8d08de856063
-  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 60d873efa20aa61429c8260932e80746
   - enabled: 1
-    path: Assets/Scenes/Defeat.unity
-    guid: 108f66637f6aa2b499c78fb3a2c72cdd
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: 4d76252250e7d6545b256f270d0b604c
+    path: Assets/Scenes/StartMenu 1.unity
+    guid: f80b50364efd1be419ac9a64f40bb745
   m_configObjects: {}

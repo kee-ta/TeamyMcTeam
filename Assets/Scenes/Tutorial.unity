@@ -1937,6 +1937,7 @@ MonoBehaviour:
     - What would you like to do?
     - "Wahahaha! What a little snail wasting your time there?\r"
     - "Why make your life so tough when you can just chill?\r"
+    - Will you help me get some flowers? They make great accessories.
     Character: {fileID: 21300000, guid: 310924f2e22a2ec4f81f4b79c8d8a00e, type: 3}
 --- !u!1 &137753349
 GameObject:
@@ -2440,7 +2441,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[ Left mouse click ] on "reject" button
+  m_Text: '[ Left mouse click ] on "refuse" button
 
     if you don''t have the resources'
 --- !u!222 &167989289
@@ -69479,8 +69480,7 @@ MonoBehaviour:
 
 '
     - "Me am missing some material for the upcoming campfire at my place.\r"
-    - "Me am pretty sure me need some sticks and stones, do ya happen to have some
-      of these?\r"
+    - Me am pretty sure me need some sticks, do ya happen to have some of these?
     Character: {fileID: 21300000, guid: 5eb39791ea4e2ee4482f9af1b6d0a54d, type: 3}
 --- !u!1 &363977049
 GameObject:
@@ -69974,8 +69974,8 @@ MonoBehaviour:
     - What would you like to do?
     - "Uhh\u2026 Hello\u2026 I heard news that you set up a shop to sell materials...."
     - "Uhh\u2026 I... I am not stalking\u2026 I jus\u2026 just need some materials\u2026"
-    - "Do you have any items that I can use to decorate my house\u2026 some flowers
-      perhaps\u2026? Or leaves\u2026?"
+    - "Do you have any items that I can use to decorate my house\u2026 some leaves
+      perhaps\u2026?"
     Character: {fileID: 21300000, guid: 3b64f01e267970e46a02485c635b4a09, type: 3}
 --- !u!1 &409415415
 GameObject:
@@ -80361,7 +80361,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[ Left mouse click ] to buy'
+  m_Text: '[ LEFT MOUSE CLICK ] to buy stick'
 --- !u!222 &1386655480
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -84406,6 +84406,7 @@ MonoBehaviour:
   - {fileID: 1223860639}
   - {fileID: 1081006389}
   colliders: {fileID: 0}
+  SellButton: {fileID: 0}
 --- !u!1 &1877559941
 GameObject:
   m_ObjectHideFlags: 0
@@ -86268,7 +86269,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Approach the horse and press [ SPACEBAR ]
+  m_Text: Approach the horse
 --- !u!222 &2036549893
 CanvasRenderer:
   m_ObjectHideFlags: 0
