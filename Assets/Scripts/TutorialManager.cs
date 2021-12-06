@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
+    public GameObject skipButt;
+
     public GameObject[] popUps; // A place to drop all of the game key instructions
     private int popUpIndex = 0;
     public GameObject colliders;
@@ -139,6 +141,7 @@ public class TutorialManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0))
             {
                 popUpIndex++;
+                skipButt.SetActive(false);
             }
 
         }

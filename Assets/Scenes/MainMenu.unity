@@ -323,7 +323,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: ea039872014c612428c521ac7b5a16ae, type: 3}
+    m_Font: {fileID: 12800000, guid: 57f6cf07c0320ad42a909f2267dd097b, type: 3}
     m_FontSize: 250
     m_FontStyle: 0
     m_BestFit: 0
@@ -471,7 +471,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9316dbdd81bb6004c94c0fc00dd335bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 043dd55ac6014ca4db9b14cd83cd40f2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.75
   m_Pitch: 1
@@ -969,7 +969,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9316dbdd81bb6004c94c0fc00dd335bf, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 043dd55ac6014ca4db9b14cd83cd40f2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8f8df217c670d17479aef55040aa9707, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c279589de86ae141aa2bb4966cf1c76, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
