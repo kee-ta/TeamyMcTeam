@@ -69975,7 +69975,7 @@ MonoBehaviour:
     - "Uhh\u2026 Hello\u2026 I heard news that you set up a shop to sell materials...."
     - "Uhh\u2026 I... I am not stalking\u2026 I jus\u2026 just need some materials\u2026"
     - "Do you have any items that I can use to decorate my house\u2026 some flowers
-      perhaps\u2026? Or leaves\u2026?"
+      perhaps\u2026?"
     Character: {fileID: 21300000, guid: 3b64f01e267970e46a02485c635b4a09, type: 3}
 --- !u!1 &409415415
 GameObject:
@@ -84406,6 +84406,7 @@ MonoBehaviour:
   - {fileID: 1223860639}
   - {fileID: 1081006389}
   colliders: {fileID: 0}
+  SellButton: {fileID: 0}
 --- !u!1 &1877559941
 GameObject:
   m_ObjectHideFlags: 0
