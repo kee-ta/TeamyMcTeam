@@ -6,7 +6,13 @@ public class TutorialManager : MonoBehaviour
 {
     public GameObject[] popUps; // A place to drop all of the game key instructions
     private int popUpIndex = 0;
-
+    public GameObject colliders;
+    void Awake(){
+        colliders = GameObject.Find("BirdBlue");
+        if(colliders){
+            Debug.Log("Found you!");
+        }
+    }
     private void Update()
     {
         // Want pop up instructions to be displayed in the game view
@@ -37,7 +43,9 @@ public class TutorialManager : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space)) // Needs to check if collides with NPC
             {
+                if(colliders.GetComponent<ShopTriggerCollider>().HasCollision()){
                 popUpIndex++;
+                }
             }
 
         }

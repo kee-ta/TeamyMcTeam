@@ -41,6 +41,9 @@ public class ShopTriggerCollider2 : MonoBehaviour {
         }
     }
 
+    public bool HasCollision(){
+        return canShow;
+    }
 
     private void OnTriggerExit2D(Collider2D collider) {
         Debug.Log("Left Shop Area");
